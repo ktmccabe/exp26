@@ -11,7 +11,6 @@ This document will include important links and course notes for Experimental Met
 
 <!-- Instructions: https://ontheline.trincoll.edu/bookdown.html -->
 
-
 ## Getting Set Up in R {.unnumbered}
 
 **Goal**
@@ -51,8 +50,6 @@ RStudio is an open-source and free program that greatly facilitates the use of R
 Now you should have something that looks like this:
 
 ![](images/rconsole2.png)
-
-
 
 -   The upper-left window has our .R script document that will contain code.
 -   The lower-left window is the console. This will show the output of the code we run. We will also be able to type directly in the console.
@@ -121,7 +118,6 @@ Now that we have saved our R script, let's work inside of it. Remember, we are i
 
 ![](images/templateR.png)
 
-
 -   Then you can start answering problems in the rest of the script.
 -   Think of the R script as where you write the final draft of your paper. In the Console (the bottom-left window), you can mess around and try different things, like you might when you are taking notes or outlining an essay. Then, write the final programming steps that lead you to your answer in the R script. For example, if I wanted to add 5 + 3, I might try different ways of typing it in the Console, and then when I found out `5 + 3` is the right approach, I would type that into my script.
 
@@ -139,8 +135,6 @@ Try it: Type `5 + 3` in the R script. Then, try to execute `5 + 3`. It should lo
 
 ![](images/rtemplate2.png)
 
-
-
 After you executed the code, you should see it pop out in your Console:
 
 ```{r}
@@ -148,7 +142,6 @@ After you executed the code, you should see it pop out in your Console:
 ```
 
 ![](images/runningcode.png){width="90%"}
-
 
 Note: The symbol \# also allows for annotation behind commands or on a separate line. Everything that follows \# will be ignored by R. You can annotate your own code so that you and others can understand what each part of the code is designed to do.
 
@@ -230,7 +223,6 @@ mccabe / 2
 
 A big part of learning to use R will be learning how to troubleshoot and detect typos in your code that generate error messages.
 
-
 ## R Markdown {.unnumbered}
 
 An R Markdown document, which you can also create in RStudio, allows you to weave together regular text, R code, and the output of R code in the same document. This can be very convenient when conducting data analysis because it allows you more space to explain what you are doing in each step. We will use it as an effective platform for writing up problem sets.
@@ -242,7 +234,6 @@ R Markdown documents can be "compiled" into html, pdf, or docx documents by clic
 We say this is a "compiled" RMarkdown document because it differs from the raw version of the file, which is a .Rmd file format. Below is an example of what the raw .Rmd version looks like, compared to the compiled html version.
 
 ![](images/rmarkdownraw.png){width="45%"} ![](images/rmarkdownscreenshot.png){width="40%"}
-
 
 ### Getting started with RMarkdown
 
@@ -269,7 +260,6 @@ Once you have those installed, now, each time you want to create an R Markdown d
 
 ![](images/rmarkdownnewfile.png)
 
-
 3.  After you hit "OK" a new .Rmd script file will open in your top-left window with some template language and code chunks, similar to the image below. Alternatively, you can start from scratch by clicking "Create Empty Document" or open a template .Rmd file of your own saved on your computer.
 
 ![](images/rmarkdowntemplate.png)
@@ -293,14 +283,13 @@ Once you have those installed, now, each time you want to create an R Markdown d
 
 ![](images/codechunkexample.png){width="70%"}
 
-
 7.  ***Knitting the document.*** Once you have added a code chunk and/or some text, you are ready to compile or "Knit" the document. This is what generates the .html document.
     -   To do so, click on the Knit button toward the top of the top-left window of Rstudio. After a few moments, this should open up a preview window displaying the compiled html file.
     -   It will also save an actual .html file in your working directory (the same location on your computer where you have saved the .Rmd file)
     -   Try to locate this compiled .html file on your computer and open it. For most computers, .html files will open in your default web browser, such as Google Chrome or Safari.
     -   This step is a common place where errors are detected and generated. Sometimes the compiling process fails due to errors in the R code in your code chunks or an error in the Markdown syntax. If your document fails to knit, the next step is to try to troubleshoot the error messages the compiling process generates. The best way to reduce and more easily detect errors is to "knit as you go." Try to knit your document after each chunk of code you create.
 
-## Optional Setup Short Assignment 
+## Optional Setup Short Assignment
 
 Below is an exercise that will demonstrate you are able to use R as a calculator, create R scripts, and create and compile R Markdown files.
 
@@ -328,4 +317,3 @@ This video provides a brief overview of opening an R script and R Markdown file 
 3.  Create a compiled .html file by "knitting" the .Rmd file into a .html document. Save the file as "LastnameSetup1.html."
 
 All done! Submit the three documents on Canvas.
-

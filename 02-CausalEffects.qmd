@@ -1,6 +1,5 @@
 # Causal Effects {#causaleffects}
 
-
 In this section, we discuss causal effects. It builds on Gerber and Green FEDAI Chapter 2.
 
 Goal of Causality
@@ -44,7 +43,6 @@ The ***average treatment effect*** then is the mean of these individual treatmen
 
 -   Estimand: On average, how much outcomes would change if all units go from untreated to treated.
 
-```{=tex}
 \begin{align*}
 ATE &= \frac{1}{N} \sum_{i=1}^N \tau_i \\
 &= \mu_{Y(1)} -\mu_{Y(0)} \\
@@ -52,7 +50,7 @@ ATE &= \frac{1}{N} \sum_{i=1}^N \tau_i \\
 &= \frac{1}{N} \sum_{i=1}^N (Y_i (1)-Y_i (0))\\
 &= E[Y_i(1) - Y_i(0)]\\
 \end{align*}
-```
+
 ATE $= \frac{1}{N} \sum_{i=1}^N \tau_i$ is what we want to describe a causal effect, but in real life, we have problems. What are they?
 
 <details>
@@ -99,11 +97,10 @@ A few definitions:
 
 ***Expectation***
 
-```{=tex}
 \begin{align*}
 E[X]=\sum x Pr[X=x]
 \end{align*}
-```
+
 -   where $Pr[X=x]$ denotes the probability that $X$ takes on the value $x$, and where the summation is taken over all possible values of $x$. Think of this like a weighted average.
 
 Example: $E[Y_i(1)]$ is the expected value of the treated potential outcome of a subject who is randomly sampled.(It will equal the average value of all possible values.)
@@ -123,16 +120,14 @@ In the real world, we follow this process for causal identification:
 
 Suppose $D_i$ were randomly assigned such that $m$ subjects assigned to treatment and $N-m$ subjects assigned to control.
 
-```{=tex}
 \begin{align*}
 \widehat{ATE} &= \frac{1}{m}\sum_1^m Y_i - \frac{1}{N-m}\sum_{m+1}^{N} Y_i \\
 \end{align*}
-```
+
 Is the difference in means estimator an unbiased estimate for the ATE? How can we find out?
 
 We take the expected value:
 
-```{=tex}
 \begin{align*}
 E[\widehat{ATE}] &= E[\frac{1}{m}\sum_1^m Y_i - \frac{1}{N-m}\sum_{m+1}^{N} Y_i ]\\
 &= \frac{1}{m}\sum_1^m E(Y_i) - \frac{1}{N-m}\sum_{m+1}^{N} E(Y_i ) \\
@@ -141,7 +136,7 @@ E[\widehat{ATE}] &= E[\frac{1}{m}\sum_1^m Y_i - \frac{1}{N-m}\sum_{m+1}^{N} Y_i 
 &= E[Y_i(1) | D_i = 1] - E[Y_i(0) | D_i = 0] \\
 %&= E[Y_i (1)]-E[Y_i (0)]=E[\tau_i ]=ATE
 \end{align*}
-```
+
 Is the final statement equivalent to the ATE?
 
 -   We want our final statement to be $E[Y_i (1)]-E[Y_i (0)]=E[\tau_i ]$=ATE
@@ -168,7 +163,6 @@ When does this occur? Random assignment of treatment!!
 
 Putting this together, under random assignment:
 
-```{=tex}
 \begin{align*}
 E[\widehat{ATE}] &= E[\frac{1}{m}\sum_1^m Y_i - \frac{1}{N-m}\sum_{m+1}^{N} Y_i ]\\
 &= \frac{1}{m}\sum_1^m E(Y_i) - \frac{1}{N-m}\sum_{m+1}^{N} E(Y_i ) \\
@@ -176,7 +170,7 @@ E[\widehat{ATE}] &= E[\frac{1}{m}\sum_1^m Y_i - \frac{1}{N-m}\sum_{m+1}^{N} Y_i 
 &= E[Y_i (1)]-E[Y_i (0)]=E[\tau_i ]\\
 E[\widehat{ATE}] &= ATE
 \end{align*}
-```
+
 ***Why Experiments***
 
 One approach for addressing the fundamental problem of causal inference is to simulate two potential states of the world through random assignment: Randomized Controlled Trials / Experiments
