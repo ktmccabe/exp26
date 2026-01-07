@@ -1,0 +1,31 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Experiments 2026"
+  date: "January 2026"
+  chapters:
+    - index.qmd
+    - 01-Experimentation.qmd
+    - 02-CausalEffects.qmd
+  page-navigation: true
+  sidebar:
+    style: docked
+    background: light
+    foreground: darkred
+
+format:
+  html:
+    theme: yeti
+    toc-title: Section Contents
+    toc: true
+    toc-location: left
+    toc-depth: 4
+    linkcolor: red
+    hypothesis: true
+
+  
+
+
+editor: visual
