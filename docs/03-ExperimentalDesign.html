@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Experimental Design – Experiments 2026</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./02-CausalEffects.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-ad70adc083ad543d9e6e22aa619c5cad.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-ExperimentalDesign.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Experimental Design</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Experiments 2026</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Notes</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-Experimentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Why Experiment?</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-CausalEffects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Causal Effects</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-ExperimentalDesign.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Experimental Design</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Section Contents</h2>
+   
+  <ul>
+  <li><a href="#designing-an-experiment" id="toc-designing-an-experiment" class="nav-link active" data-scroll-target="#designing-an-experiment"><span class="header-section-number">3.1</span> Designing an Experiment</a>
+  <ul>
+  <li><a href="#validity" id="toc-validity" class="nav-link" data-scroll-target="#validity"><span class="header-section-number">3.1.1</span> Validity</a></li>
+  <li><a href="#design-space-for-experiments" id="toc-design-space-for-experiments" class="nav-link" data-scroll-target="#design-space-for-experiments"><span class="header-section-number">3.1.2</span> Design Space for Experiments</a></li>
+  <li><a href="#types-of-designs" id="toc-types-of-designs" class="nav-link" data-scroll-target="#types-of-designs"><span class="header-section-number">3.1.3</span> Types of Designs</a></li>
+  </ul></li>
+  <li><a href="#using-qualtrics" id="toc-using-qualtrics" class="nav-link" data-scroll-target="#using-qualtrics"><span class="header-section-number">3.2</span> Using Qualtrics</a>
+  <ul>
+  <li><a href="#experimental-design-with-vignette-experiment" id="toc-experimental-design-with-vignette-experiment" class="nav-link" data-scroll-target="#experimental-design-with-vignette-experiment"><span class="header-section-number">3.2.1</span> Experimental Design with Vignette Experiment</a></li>
+  <li><a href="#unique-blocks-per-experimental-condition" id="toc-unique-blocks-per-experimental-condition" class="nav-link" data-scroll-target="#unique-blocks-per-experimental-condition"><span class="header-section-number">3.2.2</span> Unique blocks per experimental condition</a></li>
+  <li><a href="#adding-a-randomizer-in-the-survey-flow" id="toc-adding-a-randomizer-in-the-survey-flow" class="nav-link" data-scroll-target="#adding-a-randomizer-in-the-survey-flow"><span class="header-section-number">3.2.3</span> Adding a randomizer in the survey flow</a></li>
+  <li><a href="#using-piped-text-in-randomization" id="toc-using-piped-text-in-randomization" class="nav-link" data-scroll-target="#using-piped-text-in-randomization"><span class="header-section-number">3.2.4</span> Using Piped Text in Randomization</a></li>
+  <li><a href="#data-and-analysis" id="toc-data-and-analysis" class="nav-link" data-scroll-target="#data-and-analysis"><span class="header-section-number">3.2.5</span> Data and Analysis</a></li>
+  <li><a href="#additional-bells-and-whistles" id="toc-additional-bells-and-whistles" class="nav-link" data-scroll-target="#additional-bells-and-whistles"><span class="header-section-number">3.2.6</span> Additional Bells and Whistles</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="design" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Experimental Design</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In this section, we discuss best practices for experimental design, as well as implementing a design in Qualtrics.</p>
+<p>The three primary conceptual readings are:</p>
+<ul>
+<li>Mutz, D. (2021). Improving Experimental Treatments in Political Science. In J. Druckman &amp; D. Green (Eds.), Advances in Experimental Political Science (pp.&nbsp;219-238). Cambridge: Cambridge University Press.</li>
+<li>Druckman, James. Experimental Thinking. Chapter 3.</li>
+<li>Salganik, Matt. <a href="https://www.bitbybitbook.com/en/1st-ed/running-experiments/">Chap 4 of Bit by Bit</a></li>
+</ul>
+<p>We will also use an applied reading from Tomz and Weeks (2020) to discuss programming experiments.</p>
+<section id="designing-an-experiment" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="designing-an-experiment"><span class="header-section-number">3.1</span> Designing an Experiment</h2>
+<p>Four main ingredients in an experimental design</p>
+<ol type="1">
+<li>Recruitment of participants</li>
+<li>Randomization of treatment - means people in treatment and control groups will be similar</li>
+<li>Delivery of treatment (intervention)</li>
+<li>Measurement of outcomes</li>
+</ol>
+<p>What does an experimental design test?</p>
+<p>Broadly “causal effects”: More specifically:</p>
+<ul>
+<li>From Mutz: Experiments are designed to answer the question, “If x changes, how should y be expected to change?”
+<ul>
+<li>Goal of experimental treatment is to create variation in the independent variable in the direction (or directions) intended by the researcher.</li>
+</ul></li>
+<li>From Salganik: “Narrowly focused experiments answer a much more specific question: What is the average effect of this specific treatment with this specific implementation for this population of participants at this time?”</li>
+</ul>
+<p>How can we evaluate experiments?</p>
+<section id="validity" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="validity"><span class="header-section-number">3.1.1</span> Validity</h3>
+<p>“Validity refers to the extent to which the results of a particular experiment support some more general conclusion.”</p>
+<ul>
+<li>Statistical conclusion validity- correctness of statistical analysis</li>
+<li>Internal validity- correctness of procedures</li>
+<li>Construct validity- match between data and theoretical constructs</li>
+<li>External validity- how can results generalize to other situations</li>
+</ul>
+<style>
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+
+</style>
+<p><strong><em>What makes a good treatment? Does it require realism?</em></strong></p>
+<p class="comment">
+</p><p>Your ideas …</p>
+<p></p>
+<p><strong><em>How does our excludability assumption factor into this?</em></strong></p>
+<p class="comment">
+</p><p>Your ideas …</p>
+<p></p>
+<p><strong><em>What does it mean to say a treatment is generalizable?</em></strong></p>
+<p class="comment">
+</p><p>Your ideas …</p>
+<p></p>
+<p><strong><em>How can we increase engagement with our experiments?</em></strong></p>
+<p class="comment">
+</p><p>Your ideas …</p>
+<p></p>
+<p><strong><em>What is a manipulation check, and what role does it serve?</em></strong></p>
+<p class="comment">
+</p><p>Your ideas …</p>
+<p></p>
+</section>
+<section id="design-space-for-experiments" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="design-space-for-experiments"><span class="header-section-number">3.1.2</span> Design Space for Experiments</h3>
+<p><img src="images/expdimensions.png" class="img-fluid"> <a href="https://www.bitbybitbook.com/en/1st-ed/running-experiments/lab-field/"><em>Figure 4.1</em></a></p>
+<style>
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+
+</style>
+<p><strong><em>What are the tradeoffs between digital vs.&nbsp;analog experiments?</em></strong></p>
+<p class="comment">
+</p><p>Your ideas …</p>
+<p></p>
+<p><strong><em>What are the tradeoffs between lab vs.&nbsp;field experiments?</em></strong></p>
+<p class="comment">
+</p><p>Your ideas …</p>
+<p></p>
+</section>
+<section id="types-of-designs" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="types-of-designs"><span class="header-section-number">3.1.3</span> Types of Designs</h3>
+<p><img src="images/typesofdesigns.png" class="img-fluid"></p>
+<p><strong><em>What are the strengths and weaknesses of different types of designs?</em></strong></p>
+<p class="comment">
+</p><p>Your ideas …</p>
+<p></p>
+</section>
+</section>
+<section id="using-qualtrics" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="using-qualtrics"><span class="header-section-number">3.2</span> Using Qualtrics</h2>
+<p>Everyone at Rutgers gets a free Qualtrics account. Qualtrics provides a user-friendly interface for designing online surveys and survey experiments.</p>
+<p>We will walk through how to design a simple survey experiment on the platform.</p>
+<ol type="1">
+<li>Go to the <a href="https://rutgers.qualtrics.com/">Rutgers Qualtrics site</a>. The first time you use this you might have to initialize your account.</li>
+<li>Click on “Create a new project” and select “Survey” from scratch and get started.</li>
+<li>Give the project an informative name like “Experimental methods demo.” We will start with a blank survey project.</li>
+</ol>
+<p>This should take you to a landing page that looks something like this:</p>
+<p><img src="images/surveylanding.png" class="img-fluid" style="width:80.0%"></p>
+<p>When running an academic survey, generally, the first survey question should be a consent form.</p>
+<ul>
+<li>Rutgers has template consent forms <a href="https://research.rutgers.edu/researcher-support/research-compliance/human-subjects-protection-program-toolkit">here</a>. For a survey, you may want the <a href="https://research.rutgers.edu/sites/default/files/2022-01/rcr_online_survey-questionnaire_adult_consent_template_1.11.22.docx">Online survey questionnaire consent form</a>. The text of the consent form has to be approved by the IRB.</li>
+</ul>
+<p>After the consent form, you might ask respondents a set of “pre-treatment” questions, such as demographics, attention checks, etc. These are things you want to know about respondents prior to when they enter your experiment.</p>
+<ul>
+<li>You can organize these questions into different “blocks.” Blocks make it easier to move groups of questions up and down the survey, randomize the order of questions people see within a given block, or branch people to see only one of a set of blocks. We will get to this later.</li>
+</ul>
+<p>Now we are ready to program an experiment. There are many ways to do this, but we will choose a couple of common approaches.</p>
+<ul>
+<li>In general, programming the experiment will involve 1) entering experimental treatments and questions into the survey interface we are currently working in; and 2) building a randomizer in the survey flow.</li>
+<li>To prepare to program your experiment, you should have a sense of how many unique experimental conditions you have.
+<ul>
+<li>If you have a relatively small number of experimental conditions (e.g., 2-4), an easy way to program the experiment is to manually create a unique block for each condition.</li>
+<li>If you have a larger number of experimental conditions (e.g., if you are manipulating several things at once across conditions), you might consider integrating piped text or another approach to avoid the need to manually create all of your experimental conditions.</li>
+<li>If you have a very large number of conditions or need to adjust the randomization in a more complex way (e.g., control the specific probabilities that certain conditions appear), you may need to integrate JavaScript code to help with randomization.</li>
+</ul></li>
+</ul>
+<section id="experimental-design-with-vignette-experiment" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="experimental-design-with-vignette-experiment"><span class="header-section-number">3.2.1</span> Experimental Design with Vignette Experiment</h3>
+<p>For this example, we will use the experimental design from “Public Opinion and Foreign Electoral Intervention” by Michael Tomz and Jessica Weeks, published in the <em>American Political Science Review</em> in 2020. The article is <a href="https://www.cambridge.org/core/journals/american-political-science-review/article/abs/public-opinion-and-foreign-electoral-intervention/AC34B6090EACF336D08713AF69BF7904">here</a>.</p>
+<p>They “hypothesize that American tolerance of foreign intervention should depend on the type of intervention and the intended beneficiary. We distinguish three modes of interference: verbal endorsements, threats, and operations.”</p>
+<ul>
+<li>Endorsements occur when foreign countries express their opinions about candidates.</li>
+<li>Threats combine an endorsement with a promise of future reward or threat of future punishment, such as threatening to downgrade future relations if the preferred candidate loses.</li>
+<li>Operations [are] when foreign powers undertake efforts such as spreading embarrassing information about a candidate, hacking into voting systems, or donating money to an election campaign</li>
+</ul>
+<p>These are contrasted with a comparison of staying out of the election.</p>
+<p><strong><em>Hypotheses</em></strong></p>
+<ul>
+<li>“We predict that citizens will be most concerned about operations such as hacking into voting systems or donating money, as these directly advantage the favored candidate and involve behavior the U.N. has classified as impermissible interference in the internal affairs of another nation. Americans should be more tolerant of threats and most tolerant of endorsements, which could be seen as legitimate and harmless expressions of opinion that do not intrude on American sovereignty.”</li>
+<li>“We also hypothesize that revelations of foreign intervention will generate polarized partisan responses. . . we anticipate that American voters will disapprove more strongly of foreign meddling on behalf of political opponents, than of foreign meddling to assist their own party.”</li>
+</ul>
+<p>Table 1 in the paper displays the experimental design used to test the hypotheses. We will program the primary manipulation, which varies the endorsement, threat, operation, or stay out conditions. For now, we will fix the country to be China, the candidate to be the Democratic candidate, and the operation to be donating money and 100% certainty it was China.</p>
+</section>
+<section id="unique-blocks-per-experimental-condition" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="unique-blocks-per-experimental-condition"><span class="header-section-number">3.2.2</span> Unique blocks per experimental condition</h3>
+<p>In this approach, we will create a separate block for each unique experimental vignette. In our case, we will create a block with a Text/Graphic question type. We paste in our experimental text and give the block and question informative labels. The question name will be the name of the variable for the question when you eventually load the data.</p>
+<ul>
+<li>For each condition, create a new block.</li>
+<li>See the four blocks below, one for each condition</li>
+</ul>
+<p><img src="images/endorsement.png" class="img-fluid" style="width:40.0%"> <img src="images/threat.png" class="img-fluid" style="width:40.0%"> <img src="images/operation.png" class="img-fluid" style="width:40.0%"> <img src="images/stayout.png" class="img-fluid" style="width:40.0%"></p>
+<p>After creating each experimental block, we can then add a new block with our outcome questions. Go ahead and add 1-2 outcome questions so that you have an example.If your outcome condition text is specific to each treatment condition, you can create outcome questions within the experimental blocks.</p>
+<p>Finally, after that, you may have some last demographic questions. You can put those in yet another last block.</p>
+<p>Once you have created all your blocks, you can now go to the survey flow. To do that, click on the icon in the left side of the survey landing page.</p>
+<p><img src="images/surveyflowicon.png" class="img-fluid" style="width:40.0%"></p>
+<p>Your survey flow should look something like this. We are now ready to add randomization so that each respondent only sees one of our experimental blocks, randomly assigned.</p>
+<p><img src="images/surveyflow.png" class="img-fluid" style="width:70.0%"></p>
+</section>
+<section id="adding-a-randomizer-in-the-survey-flow" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="adding-a-randomizer-in-the-survey-flow"><span class="header-section-number">3.2.3</span> Adding a randomizer in the survey flow</h3>
+<p>Within the survey flow, add a randomizer underneath the consent form.</p>
+<ul>
+<li>Under the randomizer, add an embedded data field with an informative label for your treatment (e.g., “treat”)
+<ul>
+<li>Create a unique value for each of your treatment conditions</li>
+<li>Make sure the randomizer is set to show just one of these values.</li>
+</ul></li>
+</ul>
+<p><img src="images/randomizer.png" class="img-fluid" style="width:90.0%"></p>
+<p>As people go through the survey, under the hood of qualtrics, they will be assigned one of your experimental condition values. This embedded data field will show up as a variable in the data you download. However, we need one more step to make sure people only see the experimental block that corresponds to their embedded data field. This works through branching.</p>
+<ul>
+<li>Above each experimental block, add a “Branch” object</li>
+<li>Branch people using embedded data. Set the condition to match each embedded data value, and then move the experimental blocks underneath the appropriate branch.
+<ul>
+<li>You can also duplicate the outcome block and put them underneath the corresponding treatment blocks.</li>
+</ul></li>
+<li>Hit apply to make sure the survey flow saves.</li>
+</ul>
+<p><img src="images/branchcond2.png" class="img-fluid" style="width:90.0%"></p>
+<p>A last thing we often want to do is add a branch underneath the consent form to end the survey for anyone who does not consent to take the survey. The specific end-of-survey message you provide may be different depending on which company you use to recruit respondents. For now, we will use a default end-of-survey message.</p>
+<p><img src="images/endofsurv.png" class="img-fluid" style="width:60.0%"></p>
+<p>You are now ready to “Preview” your survey!</p>
+</section>
+<section id="using-piped-text-in-randomization" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="using-piped-text-in-randomization"><span class="header-section-number">3.2.4</span> Using Piped Text in Randomization</h3>
+<p>We could complicate the randomization more so than we have done so far. For example, in Tomz and Weeks (2020), they do not fix the country to be China. Instead, they randomly vary this to be China, Pakistan, or Turkey for each respondent. We could build this added treatment arm into our design through “piped text.”</p>
+<ul>
+<li>Go back into your survey data flow. Create a second randomizer towards the top of the survey. Create a new embedded data field with an informative label, like country. Create unique fields for each of our country names. Hit apply.</li>
+</ul>
+<p><img src="images/piped1.png" class="img-fluid" style="width:70.0%"></p>
+<ul>
+<li>Now, in addition to being assigned a treatment condition, everyone is also independently randomly assigned a country. We now need to make sure the text they see reflects both their treatment condition and country.
+<ul>
+<li>We could create 4 X 3 experimental blocks to reflect these dual randomizations.</li>
+<li>Instead, we are going to integrate the second treatment into the four blocks we have already programmed– just to save us time.</li>
+</ul></li>
+<li>Back in the survey landing page, click on every single block of text or question that includes the word “China.” In place of “China” click on the “piped text” option. Set the piped text to be the “country” embedded data field. Here is an example. Note: you need to do this for every single mention of country.</li>
+</ul>
+<p><img src="images/piped2.png" class="img-fluid" style="width:70.0%"></p>
+<p>We could complicate our design even further by adding additional piped text randomization to vary whether it is the Democratic vs.&nbsp;Republican candidate, the percent certainty about the country involved, and the type of operation. This would all involve adding additional randomizers and/or branching in the survey flow, along with piped text in the experimental blocks.</p>
+</section>
+<section id="data-and-analysis" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="data-and-analysis"><span class="header-section-number">3.2.5</span> Data and Analysis</h3>
+<p>Once you have a draft of your survey programmed, you will want to “preview” the survey from the perspective of a respondent by clicking “preview” in the survey landing page.</p>
+<p><img src="images/surveypreview.png" class="img-fluid" style="width:70.0%"></p>
+<p>Repeat this a few times to see if things seem to be working properly. After that, you can do a few more steps to test your survey.</p>
+<ul>
+<li>Option 1: Fake Data. In the survey landing, go to Tools -&gt; Generate test responses. This will automatically generate fake/simulated responses to your survey. This can allow you to check how the data will download, see if you can load it into your preferred statistical software and access the variables in the way you imagined, and check if the randomization appears to work properly.</li>
+<li>Option 2: Get a distribution link for your survey, and send the link to your friends and colleagues to help you test the survey from a respondent’s perspective.
+<ul>
+<li>Go to Distributions -&gt; Get a single reusable link</li>
+<li>Note: once you click this, your survey is now published and “active.” To make any future changes to your survey, on the survey landing you will have to click “Publish.”</li>
+</ul></li>
+</ul>
+<p>With both of these options, your survey will start to populate responses in the Data and Analysis section of Qualtrics. Click on this now that you have done one or both of these steps.</p>
+<p>This will give you an overview of the responses and number of recorded responses.</p>
+<p>This is also where we can download the data. Go to Export and Import - &gt; Export Data.</p>
+<ul>
+<li>Download the data as a csv file if you plan to work in R.</li>
+<li>If you click on “More options,” you can export randomized viewing order as well as other features you may want to toggle on or off.</li>
+</ul>
+<p>If you open up your .csv file in a spreadsheet software like Excel, you will notice that the first row contains your question names as variables. The next two rows are more information about the questions, including the question wording. The actual responses start in row 3.</p>
+<ul>
+<li>If you load the csv file into R as is, you would want to delete the first two rows from your dataframe (the first row will automatically be treated as a header in R). The R package <code>qualtRics</code> has a function that will do this for you.</li>
+<li>Alternatively, you can delete rows 2-3 from the spreadsheet software before loading it into R.</li>
+<li>Save the .csv file with an informative name in the working directory where you store files to work on in R.</li>
+</ul>
+<p>Load the data into R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## my data are in a /data/ subfolder of my working directory</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>expdemo <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/expdemo.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>expdemo <span class="ot">&lt;-</span> expdemo[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>),] <span class="co"># remove first two rows</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(expdemo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 500</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(qualtRics)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="do">## my data are in a /data/ subfolder of my working directory</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>expdemo <span class="ot">&lt;-</span> <span class="fu">read_survey</span>(<span class="st">"data/expdemo.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+── Column specification ────────────────────────────────────────────────────────
+cols(
+  .default = col_character(),
+  IPAddress = col_logical(),
+  Progress = col_double(),
+  `Duration (in seconds)` = col_double(),
+  Finished = col_logical(),
+  RecipientLastName = col_logical(),
+  RecipientFirstName = col_logical(),
+  RecipientEmail = col_logical(),
+  ExternalReference = col_logical(),
+  LocationLatitude = col_double(),
+  LocationLongitude = col_double(),
+  UserLanguage = col_logical(),
+  manipcheck_year = col_double()
+)
+ℹ Use `spec()` for the full column specifications.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(expdemo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 500</code></pre>
+</div>
+</div>
+<p>Let’s limit the sample to those who agreed to our consent form. Locate your consent variable and subset on those who agree.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>expdemo <span class="ot">&lt;-</span> <span class="fu">subset</span>(expdemo, QID1 <span class="sc">==</span> <span class="st">"I Agree"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>At this stage, we just have fake/test respondents. However, we can still see if the randomization works properly and if the outcome questions are populating in the way we want.</p>
+<p>For example, we want about a quarter of respondents assigned to each of the experimental conditions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(expdemo<span class="sc">$</span>treat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+endorsement   operation     stayout      threat 
+         71          58          57          56 </code></pre>
+</div>
+</div>
+<p>And let’s make sure our outcomes are populating correctly. Note how people from each condition have populated the outcomes. This gives us confidence that the survey logic is working correctly. If, for example, no one from the endorsement condition had answered the outcome, this might mean we had a typo or other error in our survey logic.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(expdemo<span class="sc">$</span>approval)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+              Approve somewhat               Approve strongly 
+                            51                             46 
+           Disapprove somewhat            Disapprove strongly 
+                            49                             43 
+Neither approve nor disapprove 
+                            53 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="at">condition=</span>expdemo<span class="sc">$</span>treat,</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">outcome =</span> expdemo<span class="sc">$</span>approval)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             outcome
+condition     Approve somewhat Approve strongly Disapprove somewhat
+  endorsement               13               15                  19
+  operation                 13                9                   9
+  stayout                   15               11                   7
+  threat                    10               11                  14
+             outcome
+condition     Disapprove strongly Neither approve nor disapprove
+  endorsement                  13                             11
+  operation                     9                             18
+  stayout                      11                             13
+  threat                       10                             11</code></pre>
+</div>
+</div>
+<p>If our survey programming was all set, at this point, you could actually set up your entire R code and analysis based on the fake data. That would mean that all you have to do after you run the survey with real respondents is switch the dataset you load into the software. That would be the ultimate “pre-analysis plan.”</p>
+<p>Once you are done testing in Qualtrics, back in the Data and Analysis page, you can delete all responses using Tools -&gt; Delete data.</p>
+<p>Once you are done testing and revising the survey, you are now ready to integrate it with your preferred survey firm/recruiting platform. The specific steps from here going forward vary across platforms.</p>
+</section>
+<section id="additional-bells-and-whistles" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6" class="anchored" data-anchor-id="additional-bells-and-whistles"><span class="header-section-number">3.2.6</span> Additional Bells and Whistles</h3>
+<p>Qualtrics has a number of other features you can use, including different question types, the ability to randomize the order of response options, features to require/request responses.You can continue to explore these as you develop your own surveys.</p>
+<ul>
+<li><p>Their help pages are pretty useful. Here is one on <a href="https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/question-types-guide/question-types-overview/">question types</a>.</p></li>
+<li><p>This <a href="https://cghlewis.com/blog/survey_data/">blog post</a> from Crystal Lewis also mentions several important tips and quirks of Qualtrics to consider when building a survey.</p></li>
+</ul>
+<p>For those familiar with “conjoint experiments” that have a lot of randomization, Anton Strezhnev has developed a tool for programming these in Qualtrics. See information <a href="https://github.com/astrezhnev/conjointsdt">here</a>.</p>
+<p>It is also possible to download data from Qualtrics directly into R using an R package <a href="https://github.com/ropensci/qualtRics">here</a>.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./02-CausalEffects.html" class="pagination-link" aria-label="Causal Effects">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Causal Effects</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -9,6 +9,7 @@ book:
     - index.qmd
     - 01-Experimentation.qmd
     - 02-CausalEffects.qmd
+    - 03-ExperimentalDesign.qmd
   page-navigation: true
   sidebar:
     style: docked
