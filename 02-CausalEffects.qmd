@@ -132,7 +132,7 @@ We take the expected value:
 E[\widehat{ATE}] &= E[\frac{1}{m}\sum_1^m Y_i - \frac{1}{N-m}\sum_{m+1}^{N} Y_i ]\\
 &= \frac{1}{m}\sum_1^m E(Y_i) - \frac{1}{N-m}\sum_{m+1}^{N} E(Y_i ) \\
 &= \frac{E(Y_1) + E(Y_2) +...+E(Y_m)}{m} -  \frac{E(Y_{m+1}) + E(Y_{m+2}) +...+E(Y_N)}{N-m}\\
-&= \frac{m * E[Y_i(1 | D_i = 1)]}{m} - \frac{(N-m)* E[Y_i(0) | D_i = 0]}{N-m}\\
+&= \frac{m * E[Y_i(1) | D_i = 1]}{m} - \frac{(N-m)* E[Y_i(0) | D_i = 0]}{N-m}\\
 &= E[Y_i(1) | D_i = 1] - E[Y_i(0) | D_i = 0] \\
 %&= E[Y_i (1)]-E[Y_i (0)]=E[\tau_i ]=ATE
 \end{align*}
@@ -377,7 +377,6 @@ We could go a step further to calculate the ATE.
 ate <- resume %>%
   group_by(race) %>%
   summarise(means = mean(call)) %>%
-  ungroup() %>%
   spread(race, means)%>%
   mutate(diff = black - white)
 
