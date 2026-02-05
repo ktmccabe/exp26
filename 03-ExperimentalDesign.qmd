@@ -31,12 +31,16 @@ How can we evaluate experiments?
 
 ### Validity
 
-"Validity refers to the extent to which the results of a particular experiment support some more general conclusion."
+"Validity refers to the extent to which the results of a particular experiment support some more general conclusion" (Salganik, 161)
 
 -   Statistical conclusion validity- correctness of statistical analysis
 -   Internal validity- correctness of procedures
 -   Construct validity- match between data and theoretical constructs
 -   External validity- how can results generalize to other situations
+
+![](images/druck3intv.png)
+
+What would be examples of violations of internal validity, for example?
 
 ```{=html}
 <style>
@@ -54,6 +58,8 @@ font-style: italic;
 
 ***What makes a good treatment? Does it require realism?***
 
+Mutz says, "Manipulation of the independent variable in an experiment need not occur by means of something that also happens regularly in the real world. In fact, it matters very little how one goes about altering the independent variable so long as it works, and so long as the researcher manipulates strictly the independent variable he/she has in mind and nothing more. To put this more succinctly, treatments do not require mundane realism (2021, 221)."
+
 <p class="comment">
 
 Your ideas ...
@@ -69,6 +75,8 @@ Your ideas ...
 </p>
 
 ***What does it mean to say a treatment is generalizable?***
+
+![]](images/druck3valid.png)
 
 <p class="comment">
 
