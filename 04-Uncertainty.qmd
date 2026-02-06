@@ -15,7 +15,7 @@ Standard errors represent the standard deviation of a sampling distribution.
 
 Measure of spread: typical deviation of an observation from the mean.
 
-![](images/spread1.png){width="40%"} ![](images/spread2.png){width="40%"}
+![](images/spread1.png){width="40%"} ![](images/spread2.jpg){width="40%"}
 
 *From the Cartoon Guide to Statistics*
 
@@ -71,56 +71,50 @@ The population mean and variance are $\mu_y$ and $\sigma^2_y$ for some variable 
 
 Well we already know the mean of our sample mean ($\bar{Y}$) is the population mean $(\mu_y)$:
 
-```{=tex}
 \begin{align*}
 E(\bar{Y}) &= E[\frac{1}{N}\sum_{i=1}^{N} y_i] \\
 &= \frac{1}{N}*[E(y_1) + E(y_2) + ... + E(y_N)]\\
 &= \frac{1}{N}*N\mu_y\\
 &= \mu_y
 \end{align*}
-```
+
 What about the variance of $\bar{Y}$? We call the variance of our population mean: $\sigma^2$. \vspace{3mm}
 
-```{=tex}
 \begin{align*}
 Var(\bar{Y}) &= Var[\frac{1}{N}\sum_{i=1}^{N} y_i] \\
 &= \frac{1}{N^2}*[Var(y_1) + Var(y_2) + ... + Var(y_N)]\\
 &= \frac{1}{N^2}*N\sigma^2\\
 &= \frac{\sigma^2}{N}
 \end{align*}
-```
+
 Then to get to the standard error, we take the square root:
 
-```{=tex}
 \begin{align*}
 &= \frac{\sigma}{\sqrt{N}}
 \end{align*}
-```
+
 We cannot observe the actual $\sigma$ so instead, we will follow the practice of using a "sample analogue." In our case, this is $s$, the sample standard deviation:
 
 -   So we have an ***estimate for the standard error of our sample mean***:
 
-```{=tex}
 \begin{align*}
 \widehat{SE}_m &= \frac{s}{\sqrt{N}}\\
 \end{align*}
-```
+
 ***Computing the estimate of our standard error***
 
 1.  Take the standard deviation of our sample. Recall:
 
-```{=tex}
 \begin{align*}
 s &= \sqrt{\frac{1}{N-1} \sum_{i=1}^{N} (y_i -  \bar{y})^2 }\\
 \end{align*}
-```
+
 2.  Divide by the square root of the sample size.
 
-```{=tex}
 \begin{align*}
 \widehat{SE}_m &= \frac{s}{\sqrt{N}}\\
 \end{align*}
-```
+
 ***Example***
 
 What's our estimate for the mean and standard error for feeling thermometer scores toward liberals?
@@ -146,11 +140,10 @@ So we have an estimate for the standard error of our sample mean: But often we w
 
 When we take the difference in variances from two independent samples, we add their variances:
 
-```{=tex}
 \begin{align*}
 \widehat{SE}_{d-i-m} &= \sqrt{\frac{\widehat{Var}(Y_i(1))}{m} + \frac{\widehat{Var}(Y_i(0))}{N-m}}\\
 \end{align*}
-```
+
 Note: Let's inspect this formula. What does it tell us about when the standard error will be larger/smaller?
 
 -   Gives us insight into designs with blocking, matched pairs
@@ -163,18 +156,16 @@ Note: Let's inspect this formula. What does it tell us about when the standard e
 
 3.  Find the critical value associated with the test level. Example:
 
-```{=tex}
 \begin{align*}
 z_{crit (1-\alpha/2)} &= 1.96\\
 \end{align*}
-```
+
 4.  Multiply the critical value by the standard error of your statistic, and add and subtract from the statistic
 
-```{=tex}
 \begin{align*}
 CI &= \bar{Y} +/- crit.value*\widehat{SE}_{\bar{Y}}\\
 \end{align*}
-```
+
 Careful when interpreting CI's: note that the interval may vary from experiment to experiment, while the parameter stays fixed.
 
 ***Example computing confidence intervals***
@@ -224,11 +215,10 @@ t &= \frac{\bar{X} - \mu_o}{\widehat{SE}_m}\\
 
 Two populations
 
-```{=tex}
 \begin{align*}
 t &= \frac{(\bar{X_1} - \bar{X_0})- (\mu_1 - \mu_0)}{\widehat{SE}_{d-i-m}}\\
 \end{align*}
-```
+
 In each case, we standardize our estimates according to the student's t-distribution. We look to see just how extreme our t statistic is. t is our test statistic, a ratio between the size of the difference in means over the variability in the underlying data, represented by the standard error. [Here](https://blog.minitab.com/en/adventures-in-statistics-2/understanding-t-tests-t-values-and-t-distributions) is a relatively accessible summary of t values.
 
 ### p-values
@@ -280,6 +270,7 @@ font-style: italic;
 
 </style>
 ```
+
 ***Is this treatment a good treatment?*** Use the principles we discussed last section to evaluate this implementation.
 
 <p class="comment">
@@ -622,7 +613,6 @@ The variance of a random variable is a measure of spread (written as $Var(X)$ or
 
 OK: The variance of a random variable is defined as the expected squared deviation from the expected value. Let's do this for a random variable $X_i$ (i.e., from $E(X_i)$ or $\mu$):
 
-```{=tex}
 \begin{align*}
 Var(X_i) &= E[(X_i - \mu)^2] 
 %\\
@@ -630,7 +620,7 @@ Var(X_i) &= E[(X_i - \mu)^2]
 %&=E(X_i^2) - 2* E(X_i)*E(X_i) + [E(X_i)]^2 && \text{ 2) Move expectation inside, rewrite $\mu$ as $E%(X_i)$}\\
 %&= E(X_i^2) - [E(X_i)]^2 && \text{ 3) Subtract like terms}
 \end{align*}
-```
+
 The square root of this quantity is the standard deviation.
 
 ***Expectation and Variance of a Mean***
@@ -642,11 +632,10 @@ We now consider our mean (e.g., $\bar{X}$) as our random variable and will deriv
 
 Recall: The expected value of our sample mean ($E(\bar{X})$) can be written as:
 
-```{=tex}
 \begin{align*}
 E(\bar{X}) &= \frac{1}{N} \sum_{i=1}^N E(X_i)\\
 \end{align*}
-```
+
 So we now start with $Var(\bar{X})$ instead of $Var(X_i)$. However, our variance is still defined as a squared deviation. This time it is the squared deviation of a sample mean from the expected value of the sample mean. \begin{align*}
 Var(\bar{X}) &= E[(\bar{X} - E(\bar{X}))^2]\\
 &= E[(\frac{1}{N} \sum_{i=1}^N X_i - E(\frac{1}{N} \sum_{i=1}^N X_i))^2] && \text{rewrite $\bar{X}$}\\
@@ -690,11 +679,10 @@ Now if we want the standard error we get: \begin{align*}
 
 Like before, we use sample substitutes ($s_1$ and $s_0$) where $m$ represents the number of units in the treatment and $N-m$, the number of unites in the control (switching notation here to match the book):
 
-```{=tex}
 \begin{align*}
 \widehat{SE}_{d-i-m} &= \sqrt{\frac{s^2_1}{m} + \frac{s^2_0}{N-m}}
 \end{align*}
-```
+
 Note: this estimate of the standard error is considered conservative and is only appropriate when samples are independent. We will discuss alternative measures of variance.
 
 -   For example, when we use OLS to get out difference in means, we will use a slightly different "pooled variance estimator" where we assume $\sigma_1^2 = \sigma_0^2$.
@@ -758,11 +746,10 @@ There may be some slight differences in the uncertainty depending on how you spe
 
 A t-test generally uses this formula for standard errors which allows the variances to be unequal between the two groups `var.equal = F`. However, this is not the only way to estimate uncertainty when comparing two independent groups.
 
-```{=tex}
 \begin{align*}
 \widehat{SE}_{d-i-m} &= \sqrt{\frac{s^2_1}{m} + \frac{s^2_0}{N-m}}
 \end{align*}
-```
+
 ```{r}
 asians.t <- t.test(asians$study2_avg[asians$treatment_cit == 1],
                    asians$study2_avg[asians$treatment_cit == 0],
@@ -785,11 +772,10 @@ se.diffasians
 
 It is also common to use an assumption that the variances between groups are equal `var.equal = T`, in which case the variance is calculated using a "pooled" estimator.
 
-```{=tex}
 \begin{align*}
 \widehat{SE}_{d-i-m pooled} &= \sqrt{\frac{(m-1)s^2_1 + (N -m-1)s^2_2}{N - 2}}*\sqrt{\frac{1}{m} + \frac{1}{N-m}}
 \end{align*}
-```
+
 ```{r}
 asians.t <- t.test(asians$study2_avg[asians$treatment_cit == 1],
                    asians$study2_avg[asians$treatment_cit == 0],
@@ -806,11 +792,10 @@ pooled.se
 
 The pooled variance t-test and simple linear regression procedure will result in the same estimates of uncertainty.
 
-```{=tex}
 \begin{align*}
 \widehat{SE}_{\hat \beta } &= \sqrt{\frac{1}{N-2} \times \frac{\sum (y_i - \hat y_i)^2}{\sum (x_i - \bar x)^2}}
 \end{align*}
-```
+
 ```{r}
 asians.fit <- lm(study2_avg ~ treatment_cit, data=asians)
 

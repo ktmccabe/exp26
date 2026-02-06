@@ -10,6 +10,7 @@ book:
     - 01-Experimentation.qmd
     - 02-CausalEffects.qmd
     - 03-ExperimentalDesign.qmd
+    - 04-Uncertainty.qmd
   page-navigation: true
   sidebar:
     style: docked
