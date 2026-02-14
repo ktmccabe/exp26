@@ -15,10 +15,9 @@ We will replicate the results from Study 2, which is a survey experiment. The sa
 
 ![](images/bankstreat.png){width="70%"}
 
-Here is a short video walking through the code to plot the ATEs using `plot` and `ggplot`. (Via youtube, you can speed up the playback to 1.5 or 2x speed.)
+Here is a short video from a previous version of the course, where this session was asynchronous, walking through the code to plot the ATEs using `plot` and `ggplot`. (Via youtube, you can speed up the playback to 1.5 or 2x speed.)
 
 {{< video src="https://www.youtube.com/watch?v=_RniJm-hmHE" >}}
-
 
 Let's load the data. Note: This file is in a .dta format, but if you try to use `read.dta` to load it, you may receive an error because it is too new of a Stata format. As an alternative, we can use the `rio` package to open the file. Install the package, open the package with `library` an load the data. The `rio` packages uses a single `import` function to load data.
 
@@ -316,18 +315,17 @@ fit.numeric <- lm(blackdon ~ angvcon*blackauto3, data=angcontrol)
 We can then calculate the average treatment effects within each level of `blackauto3` using the `marginaleffects` package.
 
 -   The first input is the object name for the regression model (e.g., `fit`).
--   The `variables` input is then the treatment condition, or the variable for which you want to estimate the marginal effect on the outcome. 
+-   The `variables` input is then the treatment condition, or the variable for which you want to estimate the marginal effect on the outcome.
 -   We then specify that we want to calculate this contrast across different levels of another variable, "blackauto3".
 
 ```{r, warning=F, message=F}
 library(marginaleffects)
-outp <- avg_comparisons(fit, variables = list(angvcon = c(0, 1)),
-                        by = "blackauto3",
-                        newdata = datagridcf(blackauto3 = c(0, 1, 2),
-                                             angvcon = c(0,1)))
-
-summary(outp)
-
+outp <- avg_comparisons(
+  fit,
+  variables = list(angvcon = c(0, 1)),
+  by = "blackauto3"
+)
+outp
 ```
 
 The summary is already in a nice dataframe format, which makes it easy to use ggplot.
@@ -350,7 +348,7 @@ Here's an alternative way to look at it with `geom_line` and `geom_ribbon`
 ```{r}
 ggplot(outp, aes(x=blackauto3, y=estimate))+
   geom_point()+
-  geom_line()+
+  geom_line(group=1)+
   geom_ribbon(aes(ymin=conf.low, ymax=conf.high), alpha=.4)+
   theme_bw()+
   geom_hline(aes(yintercept=0), linetype="dashed", colour="red3")+
@@ -363,16 +361,16 @@ ggplot(outp, aes(x=blackauto3, y=estimate))+
 
 An alternative way to represent heterogeneity is instead of plotting the conditional average treatment effects, we can plot the raw outcomes in each condition.
 
-We can then calculate the estimated outcomes using the `avg_predictions` function. 
+We can then calculate the estimated outcomes using the `avg_predictions` function.
 
 ```{r, message=F, warning=F}
 library(marginaleffects)
 outp2 <- avg_predictions(fit, variables = c("blackauto3", "angvcon"),
-                         newdata=datagridcf(blackauto3 = c(0, 1, 2),
-                                  angvcon = c(0,1)))
+                         newdata=datagrid(blackauto3 = c(0, 1, 2),
+                                  angvcon = c(0,1), grid_type = "counterfactual"))
 outp2$blackauto3 <- as.numeric(as.character(outp2$blackauto3))
 outp2$angvcon <- as.factor(outp2$angvcon)
-
+outp2
 ```
 
 ```{r}
@@ -389,6 +387,44 @@ ggplot(outp2, aes(x=blackauto3, y=estimate,
   scale_x_continuous(breaks = c(0,1,2), 
                      labels = c("Low", "Medium", "High"))+
   theme(plot.title = element_text(hjust = 0.5))# centers title
+```
+
+We could instead create a barplot.
+
+```{r}
+ggplot(outp2, aes(x=blackauto3, y=estimate,
+                     fill=as.factor(angvcon)))+
+  geom_col(position=position_dodge(.9))+
+  geom_errorbar(aes(ymin=conf.low, ymax=conf.high,
+                    width=.05), position = position_dodge(.9))+
+  theme_bw()+
+  ggtitle("Average Donations to Black Organizations \n by Community nationalism")+
+  ylab("Average Black Org. Donations")+
+  xlab("Community Nationalism")+
+  scale_fill_manual("Condition", labels=c("Control", "Anger"), values=c("orange", "dodgerblue"))+
+  scale_x_continuous(breaks = c(0,1,2), 
+                     labels = c("Low", "Medium", "High"))+
+  theme(plot.title = element_text(hjust = 0.5))# centers title
+```
+
+Also note that if you don't wish to show the uncertainty, you can get a barplot more easily by doing this:
+
+```{r}
+agg <- aggregate(blackdon ~ angvcon + blackauto3, data=angcontrol, mean)
+agg
+
+ggplot(agg, aes(x=blackauto3, y=blackdon,
+                     fill=as.factor(angvcon)))+
+  geom_col(position=position_dodge(.9))+
+  theme_bw()+
+  ggtitle("Average Donations to Black Organizations \n by Community nationalism")+
+  ylab("Average Black Org. Donations")+
+  xlab("Community Nationalism")+
+  scale_fill_manual("Condition", labels=c("Control", "Anger"), values=c("orange", "dodgerblue"))+
+  scale_x_continuous(breaks = c(0,1,2), 
+                     labels = c("Low", "Medium", "High"))+
+  theme(plot.title = element_text(hjust = 0.5))# centers title
+
 ```
 
 ## Some additional plotting options

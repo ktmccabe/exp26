@@ -592,7 +592,7 @@ length(simstimates[abs(simstimates) >= abs(estimate)])/nsims
 
 This section includes definitions of expectation and variance and walks through more deliberately how we derive what the variance of a mean is (which we need for standard errors!).
 
--   This [video](https://www.youtube.com/watch?v=7mYDHbrLEQo) walks you through the steps in the slides from Week 3 Uncertainty with very similar notation. Below, we go through a more elongated version of the derivation that starts from the basic definition of the variance of a random variable.
+-   This [video](https://www.youtube.com/watch?v=7mYDHbrLEQo) walks you through the steps in the slides from the week on uncertainty with very similar notation. Below, we go through a more elongated version of the derivation that starts from the basic definition of the variance of a random variable.
 
 We are going to exploit a few "rules" of expectations and variance as we go through the derivation.
 

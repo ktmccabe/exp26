@@ -11,6 +11,7 @@ book:
     - 02-CausalEffects.qmd
     - 03-ExperimentalDesign.qmd
     - 04-Uncertainty.qmd
+    - 05-Visualization.qmd
   page-navigation: true
   sidebar:
     style: docked

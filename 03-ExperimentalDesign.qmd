@@ -76,7 +76,7 @@ Your ideas ...
 
 ***What does it mean to say a treatment is generalizable?***
 
-![]](images/druck3valid.png)
+![](images/druck3valid.png)
 
 <p class="comment">
 
