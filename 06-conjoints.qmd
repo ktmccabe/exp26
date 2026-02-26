@@ -11,7 +11,7 @@ In this section, we will briefly go over conjoint designs. You can see the follo
 -   Accounting for measurement error in conjoints: Katherine Clayton, Yusaku Horiuchi, Aaron R. Kaufman, Gary King, and Mayya Komisarchik. Working Paper. ["Correcting Measurement Error Bias in Conjoint Survey Experiments".](https://tinyurl.com/24btw3dq)
 -   Programming a conjoint in qualtrics:
     -   Strezhnev, Anton. [Conjoint Survey Design Tool](https://github.com/astrezhnev/conjointsdt)
-    -   Clayton et al. [Projoint: The One-Stop Conjoint Shop](https://yhoriuchi.github.io/projoint/
+    -   Clayton et al. [Projoint: The One-Stop Conjoint Shop](https://yhoriuchi.github.io/projoint/)
 
 ## Conjoint Overview
 
