@@ -13,6 +13,7 @@ book:
     - 04-Uncertainty.qmd
     - 05-Visualization.qmd
     - 06-conjoints.qmd
+    - 07-ethics.qmd
   page-navigation: true
   sidebar:
     style: docked
