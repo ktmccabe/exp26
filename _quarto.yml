@@ -14,6 +14,7 @@ book:
     - 05-Visualization.qmd
     - 06-conjoints.qmd
     - 07-ethics.qmd
+    - 08-FieldExperiments.qmd
   page-navigation: true
   sidebar:
     style: docked

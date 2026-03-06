@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8&nbsp; Field Experiments – Experiments 2026</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./07-ethics.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-ad70adc083ad543d9e6e22aa619c5cad.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./08-FieldExperiments.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Field Experiments</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Experiments 2026</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Notes</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-Experimentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Why Experiment?</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-CausalEffects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Causal Effects</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Experimental Design</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-Uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Uncertainty</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-Visualization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualization</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-conjoints.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conjoints</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-ethics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Ethics and Sampling Considerations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-FieldExperiments.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Field Experiments</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Section Contents</h2>
+   
+  <ul>
+  <li><a href="#field-experiment-application" id="toc-field-experiment-application" class="nav-link active" data-scroll-target="#field-experiment-application"><span class="header-section-number">8.1</span> Field Experiment Application</a></li>
+  <li><a href="#clustering-standard-errors" id="toc-clustering-standard-errors" class="nav-link" data-scroll-target="#clustering-standard-errors"><span class="header-section-number">8.2</span> Clustering standard errors</a>
+  <ul>
+  <li><a href="#adjusting-p-values" id="toc-adjusting-p-values" class="nav-link" data-scroll-target="#adjusting-p-values"><span class="header-section-number">8.2.1</span> Adjusting p-values</a></li>
+  <li><a href="#additional-complex-sampling-designs" id="toc-additional-complex-sampling-designs" class="nav-link" data-scroll-target="#additional-complex-sampling-designs"><span class="header-section-number">8.2.2</span> Additional complex sampling designs</a></li>
+  </ul></li>
+  <li><a href="#compliance" id="toc-compliance" class="nav-link" data-scroll-target="#compliance"><span class="header-section-number">8.3</span> Compliance</a>
+  <ul>
+  <li><a href="#notation-for-compliance" id="toc-notation-for-compliance" class="nav-link" data-scroll-target="#notation-for-compliance"><span class="header-section-number">8.3.1</span> Notation for Compliance</a></li>
+  <li><a href="#complier-average-causal-effect" id="toc-complier-average-causal-effect" class="nav-link" data-scroll-target="#complier-average-causal-effect"><span class="header-section-number">8.3.2</span> Complier Average Causal Effect</a></li>
+  <li><a href="#design-based-approach-to-help-measure-compliance" id="toc-design-based-approach-to-help-measure-compliance" class="nav-link" data-scroll-target="#design-based-approach-to-help-measure-compliance"><span class="header-section-number">8.3.3</span> Design-based approach to help measure compliance</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="fieldexp" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Field Experiments</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In this section, we discuss field experiments, which will also allow us the opportunity to discuss the use of non-standard standard errors in experiments and issues around compliance in the receipt of experimental treatments.</p>
+<p>Our resources for this sections include</p>
+<ul>
+<li>Gerber and Green Chapters 3.6, 5, and 6</li>
+<li>Applications
+<ul>
+<li>Karpowitz, Christopher, Quin Monson and Jessica Preece. 2017. “How to Elect More Women: Gender and Candidate Success in a Field Experiment.” American Journal of Political Science. DOI: 10.1111/ajps.12300</li>
+<li>Broockman, David and Josh Kalla. 2016. “Durably reducing transphobia: A field experiment on door-to-door canvassing.” Science 352(6282): 220-24.</li>
+<li>Siegel, Alexandra., &amp; Vivienne Badaan. (2020). #No2Sectarianism: Experimental Approaches to Reducing Sectarian Hate Speech Online. American Political Science Review, 114(3), 837-855. doi:10.1017/S0003055420000283</li>
+</ul></li>
+</ul>
+<section id="field-experiment-application" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="field-experiment-application"><span class="header-section-number">8.1</span> Field Experiment Application</h2>
+<p>Karpowitz, Monson, and Preece (2017), “How to Elect More Women: Gender and Candidate Success in a Field Experiment.”</p>
+<ul>
+<li><code>prop_sd_fem2014</code>: proportion of state delegates who are women</li>
+<li><code>condition</code>: the treatment condition in which precincts were assigned: Control, Supply, Demand, or Supply + Demand</li>
+<li><code>county</code> the county in which precincts were located</li>
+</ul>
+<p>What was their research question? What is <span class="math inline">\(Y_i(1)\)</span>? What is <span class="math inline">\(Y_i(0)\)</span>?</p>
+<ul>
+<li>Why is this considered a field experiment?</li>
+</ul>
+<p>Let’s load the data and replicate the results in Table 3, column 1 of the paper.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreign)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>wom <span class="ot">&lt;-</span> <span class="fu">read.dta</span>(<span class="st">"data/karpetal.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s look at the treatment conditions</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Treatment indicator</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(wom<span class="sc">$</span>condition)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+      Control        Supply        Demand Supply+Demand 
+          453           470           446           443 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(wom<span class="sc">$</span>condition)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "factor"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Dependent variable</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(wom<span class="sc">$</span>prop_sd_fem2014)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   0.000   0.000   0.263   0.500   1.000 </code></pre>
+</div>
+</div>
+<p>We can now estimate the treatment effects. Note: We want to compare each treatment condition to the control condition. How should we do this?</p>
+<ul>
+<li>We could conduct individual <code>t.test</code> functions for each pairwise comparison.</li>
+<li>Alternatively, if we use regression, we can interpret each coefficient estimate as that difference in means between the treatment condition and the category left out of the regression.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Regression approach</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>r1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(prop_sd_fem2014 <span class="sc">~</span> condition, wom)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">summary</span>(r1)<span class="sc">$</span>coefficients, <span class="at">digits=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                       Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept)              0.2457     0.0167 14.7226   0.0000
+conditionSupply          0.0149     0.0234  0.6381   0.5235
+conditionDemand          0.0150     0.0237  0.6335   0.5265
+conditionSupply+Demand   0.0396     0.0237  1.6692   0.0953</code></pre>
+</div>
+</div>
+<p>Note how the <code>Control</code> category is left out. We can interpret each coefficient estimate as the difference in the proportion of delegates who are female between the Control condition and corresponding other condition. In this regression, we can also interpret the Intercept as the value our dependent variable takes when all of the other variables are 0 (i.e., when we are in the control condition). Before we interpret the significance of these effects, let’s take a closer look at the design.</p>
+</section>
+<section id="clustering-standard-errors" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="clustering-standard-errors"><span class="header-section-number">8.2</span> Clustering standard errors</h2>
+<p>Often, we draw a sample of independent observations where randomization occurs at the level of the individual unit. But, sometimes we have multiple observations per unit (e.g., multiple observations of a particular individual, multiple individuals in a household)</p>
+<ul>
+<li>Example: In Karpowitz et al., precincts are nested within counties. As footnote 15 notes, “The state party relies heavily on county-level party officials to organize and run the neighborhood caucus meetings.”</li>
+<li>Consequence: our observations are no longer independent.</li>
+<li>Solution: we must account for this in estimates of uncertainty.
+<ul>
+<li>We are going to “cluster” our standard errors by county</li>
+</ul></li>
+</ul>
+<p>It used to be pretty difficult to do this in R, but over the last few years, people have developed packages to integrate clustering into the standard functions for regression. We will use the package <code>estimatr</code> in this way.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"estimatr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Its primary function is <code>lm_robust</code> reflecting its easy integration of different types of “robust” standard errors.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(estimatr)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>r1.cluster <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(prop_sd_fem2014 <span class="sc">~</span> condition, wom,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">se_type=</span><span class="st">"stata"</span>, <span class="at">clusters =</span> county)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">summary</span>(r1.cluster)<span class="sc">$</span>coefficients, <span class="at">digits=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                       Estimate Std. Error t value Pr(&gt;|t|) CI Lower CI Upper
+(Intercept)              0.2457     0.0146 16.8311   0.0000   0.2158   0.2756
+conditionSupply          0.0149     0.0155  0.9639   0.3433  -0.0168   0.0466
+conditionDemand          0.0150     0.0214  0.7012   0.4890  -0.0288   0.0589
+conditionSupply+Demand   0.0396     0.0160  2.4805   0.0194   0.0069   0.0723
+                       DF
+(Intercept)            28
+conditionSupply        28
+conditionDemand        28
+conditionSupply+Demand 28</code></pre>
+</div>
+</div>
+<p>Note how the coefficient estimates remain unchanged, but the size of the standard errors, and therefore, the corresponding t-values and p-values also change.</p>
+<section id="adjusting-p-values" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="adjusting-p-values"><span class="header-section-number">8.2.1</span> Adjusting p-values</h3>
+<p>Another thing we might note about this test is that we are conducting three hypothesis tests simultaneously. This might bring up issue related to multiple comparisons problems. Some of the figures that the authors present include a “Bonferroni” adjustment to the conventional significance levels. When we have multiple hypothesis tests, this can rapidly increase the possibility that we observe at least one significant result, particularly if we assume the tests are independent:</p>
+<p><span class="math display">\[\begin{align*}
+Pr(\text{at least one significant result}) &amp;= 1 - Pr(\text{no significant result})\\
+&amp;= 1 - (1 - 0.05)^{\text{number of tests}}
+\end{align*}\]</span></p>
+<p>With 3 tests, you have a 14% chance of observing at least one significant result even if all are not significant.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">-</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.05</span>)<span class="sc">^</span><span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.142625</code></pre>
+</div>
+</div>
+<p>We can make an adjustment that makes it harder for us to conclude a result is significant under multiple comparisons. See <a href="https://egap.org/resource/10-things-to-know-about-multiple-comparisons/">EGAP’s resource</a>.</p>
+<p>Here are some examples of adjustments using the <code>p.adjust</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">## extract p-values from the regression</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>pvals <span class="ot">&lt;-</span> <span class="fu">summary</span>(r1.cluster)<span class="sc">$</span>coefficients[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">4</span>]</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>pvals</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       conditionSupply        conditionDemand conditionSupply+Demand 
+            0.34334883             0.48898188             0.01939968 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## bonferroni-- very conservative</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">p.adjust</span>(pvals, <span class="at">method=</span><span class="st">"bonferroni"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       conditionSupply        conditionDemand conditionSupply+Demand 
+            1.00000000             1.00000000             0.05819905 </code></pre>
+</div>
+</div>
+<details>
+<summary>
+The manual approach.
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">## manual (p-vals over 1 switch to 1)</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="co"># number of tests</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>pvals <span class="sc">*</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       conditionSupply        conditionDemand conditionSupply+Demand 
+            1.03004649             1.46694564             0.05819905 </code></pre>
+</div>
+</div>
+</details>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="do">## holm</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">p.adjust</span>(pvals, <span class="at">method=</span><span class="st">"holm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       conditionSupply        conditionDemand conditionSupply+Demand 
+            0.68669766             0.68669766             0.05819905 </code></pre>
+</div>
+</div>
+<details>
+<summary>
+The manual approach.
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="do">## manual-- requires pval sorting</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="co"># number of tests</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span> <span class="co"># sequence of rankings</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cummax</span>((m <span class="sc">+</span> <span class="dv">1</span> <span class="sc">-</span> i) <span class="sc">*</span> <span class="fu">sort</span>(pvals))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>conditionSupply+Demand        conditionSupply        conditionDemand 
+            0.05819905             0.68669766             0.68669766 </code></pre>
+</div>
+</div>
+</details>
+<p>As you read papers, take note of whether authors make these types of adjustments. There are different philosophies about when one must account for multiple comparisons.</p>
+</section>
+<section id="additional-complex-sampling-designs" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="additional-complex-sampling-designs"><span class="header-section-number">8.2.2</span> Additional complex sampling designs</h3>
+<p><strong><em>Clustered random assignment</em></strong></p>
+<p>Sometimes we go so far as to assign treatment by cluster (e.g., by household, village, school)</p>
+<ul>
+<li>Consequence: our observations are no longer independent.</li>
+<li>Solution: we must account for this in estimates of uncertainty.
+<ul>
+<li>Caution: if cluster size is correlated with potential outcomes, can bias ATE. See Gerber and Green (2012, 83).</li>
+<li>Caution: clustered random assignment can increase uncertainty by decreasing the degrees of freedom (you use this when calculating the p-value from the t distribution)</li>
+</ul></li>
+</ul>
+<p>Why cluster if clustering is not ideal?</p>
+<p><strong><em>Blocking</em></strong></p>
+<p>Sometimes we assign randomization within specific subgroups instead of at the individual level (Example: Karpowitz et al.&nbsp;replication experiment, pg. 12, where they randomize treatment in their survey experiment by respondent gender and by whether the respondent was from the state above or below average in female representation among Republican state legislators.)</p>
+<ul>
+<li>Ensures balance across conditions within (blocked) subgroups</li>
+<li>Relatedly, avoids need for additional covariate adjustment</li>
+<li>Facilitates subgroup analysis by suggesting that is is particularly important to have balance within these subgroups</li>
+<li>Sometimes improves precision of estimates</li>
+<li>Caution:
+<ul>
+<li>Affects how to calculate ATEs if assignment probabilities differ by block) See Gerber and Green Chapter 4.5.</li>
+<li>Affects calculation of SEs!! See Gerber and Green pgs. 73-74</li>
+</ul></li>
+</ul>
+<p><strong><em>Matched Pairs</em></strong></p>
+<p>Matched pairs is a special case of blocking. We find two units OR two clusters of units that are most closely “matched” on pre-treatment covariates</p>
+<ul>
+<li>Can use matching algorithms to do this</li>
+<li>Assign treatment randomly at the pair level, i.e., coin flip as to which unit in the pair receives treatment</li>
+<li>Caution: Must take this design into account in analysis. See Gerber and Green (2012, 77)</li>
+</ul>
+<p>For an experimental application with matched pairs, see “<a href="https://www.cambridge.org/core/journals/american-political-science-review/article/abs/empowering-women-through-development-aid-evidence-from-a-field-experiment-in-afghanistan/2926ACB97A940612C7796E1C70478E15">Empowering Women through Development Aid: Evidence from a Field Experiment in Afghanistan</a>” by Andrew Beath, Christia Fotini, and Ruben Enikolopov publised in <em>The American Political Science Review</em> in 2013. The screenshot below describes the matched pairs process. In the caption of their table of results, they describe how they accounted for matched pairs in the regression.</p>
+<p><img src="images/beath1.png" class="img-fluid" style="width:30.0%"> <img src="images/beath2.png" class="img-fluid" style="width:60.0%"></p>
+</section>
+</section>
+<section id="compliance" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="compliance"><span class="header-section-number">8.3</span> Compliance</h2>
+<p>An issue with all experimental designs, but particularly field experiments, is compliance, which refers to whether respondents received the treatment as assigned.</p>
+<p>Do subjects assigned to treatment receive treatment?</p>
+<ul>
+<li>Encouragement design: Treatment assignment might only “encourage” receipt of treatment, is an <em>intent-to-treat</em>
+<ul>
+<li>Note how Karpowitz et al.&nbsp;label Table 3 as “Intent-to-Treat” effects</li>
+</ul></li>
+<li>Compliance refers to whether receipt of treatment aligns with assignment to treatment
+<ul>
+<li>One-sided non-compliance: some individuals assigned to treatment don’t receive treatment <em>failure-to-treat</em></li>
+<li>Two-sided non-compliance: possibility of both failure-to-treat and that those not assigned to treatment, receive treatment</li>
+</ul></li>
+</ul>
+<p>In the Karpowitz et al.&nbsp;article, what might cause issues with compliance?</p>
+<section id="notation-for-compliance" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="notation-for-compliance"><span class="header-section-number">8.3.1</span> Notation for Compliance</h3>
+<p>Let <span class="math inline">\(d_i(z)\)</span> be the actual treatment status of unit i where <span class="math inline">\(z\)</span> is the experimental assignment.</p>
+<ul>
+<li>Practice: what does <span class="math inline">\(d_i(1) = 0\)</span> mean, in words?</li>
+</ul>
+<p>When everyone assigned to treatment receives the treatment <span class="math inline">\(d_i = z_i\)</span>.</p>
+<p>We can break subjects into four types based on their compliance: <span class="math display">\[\begin{align*}
+\mbox{Compliers: } &amp;d_i(1)=1; d_i(0)=0 \\
+&amp;\implies Y_i(d_i(1)) - Y_i(d_i(0)) = Y_i(1) - Y_i(0) \\
+\mbox{Always takers: } &amp;d_i(1)=1; d_i(0)=1 \\
+&amp;\implies Y_i(d_i(1)) - Y_i(d_i(0)) = Y_i(1) - Y_i(1)  \\
+\mbox{Never takers: } &amp;d_i(1)=0; d_i(0)=0 \\
+&amp;\implies Y_i(d_i(1)) - Y_i(d_i(0)) = Y_i(0) - Y_i(0) \\  
+\mbox{Defiers: } &amp;d_i(1)=0; d_i(0)=1 \\
+&amp;\implies Y_i(d_i(1)) - Y_i(d_i(0)) = Y_i(0) - Y_i(1)
+\end{align*}\]</span></p>
+<p>What does <span class="math inline">\(ATE|d_i(1) &gt; d_i(0)\)</span> mean, in words?</p>
+<p>With full compliance ATE = ITT. With non-compliance, our standard estimation of the treatment effect is now the ITT.</p>
+<ul>
+<li>Where we estimate <span class="math inline">\(ITT_i = Y_i(z = 1) - Y_i(z=0)\)</span>
+<ul>
+<li>Example: Karpowitz et al.&nbsp;stick with the ITT</li>
+</ul></li>
+<li>With assumptions, we may be able to identify and estimate the Complier Average Causal Effect, the average treatment effect just among compliers.</li>
+</ul>
+</section>
+<section id="complier-average-causal-effect" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="complier-average-causal-effect"><span class="header-section-number">8.3.2</span> Complier Average Causal Effect</h3>
+<p><span class="math inline">\(CACE = E[Y_i(d = 1) - Y_i(d = 0) | d_i(1) &gt; d_i(0)]\)</span></p>
+<p>While it may be incredibly tempting, to estimate this by just subsetting on receipt of treatment instead of experimental assignment, we cannot simply subset our treatment group to only include those who received the treatment. Why not?</p>
+<p>CACE Additional Identification Assumptions</p>
+<ul>
+<li>Exclusion restriction: <span class="math inline">\(Y_i(z, d) = Y_i(d)\)</span> where z is experimental assignment</li>
+<li>Monotonicity (i.e., no defiers): <span class="math inline">\(d_i(1) \geq d_i(0)\)</span> for all <span class="math inline">\(i\)</span></li>
+<li>In practice, to actually estimate the effect, you need data–and accurate data– on receipt of treatment. (Not always possible.)
+<ul>
+<li>How would one identify compliance in the Karpowitz et al.&nbsp;article?</li>
+<li>How would one identify compliance in the Siegel and Badaan article?</li>
+</ul></li>
+</ul>
+<p>Estimation Process is in two stages</p>
+<ol type="1">
+<li><span class="math inline">\(\widehat{ITT}_D\)</span>: Estimate the effect of experimental assignment on receipt of treatment
+<ul>
+<li>This is the proportion of compliers when assuming monotonicity (no defiers). Note: This does not necessarily identify who is a complier, just the proportion of compliers.</li>
+</ul></li>
+<li><span class="math inline">\(\widehat{ITT}\)</span>: Estimate the effect of experimental assignment on the outcome</li>
+<li>Scale the ITT by receipt of treatment: <span class="math inline">\(\widehat{CACE} = \frac{\widehat{ITT}}{\widehat{ITT}_D}\)</span>
+<ul>
+<li>We have to be in a world where <span class="math inline">\(ITT_D &gt; 0\)</span> (at least one complier) to identify the CACE</li>
+</ul></li>
+</ol>
+<p>We can take the example from Gerber and Green 2012.</p>
+<ul>
+<li>What is the effect of canvassing on voter turnout?
+<ul>
+<li>The experiment assigned some people to be canvassed, some not to be canvassed.</li>
+<li>The treatment is actually having contact with the canvasser.</li>
+<li>What could be a compliance issue here?</li>
+</ul></li>
+</ul>
+<p>Two-stages = two regressions</p>
+<ul>
+<li>Our outcome is whether someone <span class="math inline">\(Y=\)</span> <code>voted</code>.</li>
+<li>We have an experimental <span class="math inline">\(z=\)</span> <code>assignment</code> variable</li>
+<li>And we have a compliance variable <span class="math inline">\(d=\)</span> <code>treated</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Replicating Chapter 5 analyses</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="do">## z = Assigned, d = Treated, y= Voted</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreign)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>voters <span class="ot">&lt;-</span> <span class="fu">read.dta</span>(<span class="st">"data/ggch5.dta"</span>)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="do">## 1. effect of experimental assignment on receipt of treatment</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>ITTd <span class="ot">&lt;-</span> <span class="fu">lm</span>(treated <span class="sc">~</span> assigned, voters)</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="do">## 2. effect of experimental assignment on whether voted (outcome)</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>ITT <span class="ot">&lt;-</span> <span class="fu">lm</span>(voted <span class="sc">~</span> assigned, voters)</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="do">## 3. ratio of treatment effect. compare with Box 5.6</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>ITT<span class="sc">$</span>coefficients[<span class="dv">2</span>]<span class="sc">/</span>ITTd<span class="sc">$</span>coefficients[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> assigned 
+0.1407115 </code></pre>
+</div>
+</div>
+<p>Alternative, recommended approach using <code>ivreg</code>. This will calculate the correct standard errors for this type of setup using instrumental variables regression. The experimental assignment is considered an “instrument” for the treatment.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"AER"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AER) </span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Function for conducting two-stage least squares regression</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Takes form ivreg(Y ~ d | z, data)</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>cace <span class="ot">&lt;-</span> <span class="fu">ivreg</span>(voted <span class="sc">~</span> treated  <span class="sc">|</span> assigned, <span class="at">data =</span> voters)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(cace)<span class="sc">$</span>coefficients[<span class="dv">2</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Estimate  Std. Error     t value    Pr(&gt;|t|) 
+0.140711507 0.052276906 2.691657117 0.007126494 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Optional, more conservative standard errors</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">coeftest</span>(cace, <span class="fu">vcovHC</span>(cace))[<span class="dv">2</span>,] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Estimate  Std. Error     t value    Pr(&gt;|t|) 
+0.140711507 0.052433888 2.683598551 0.007300369 </code></pre>
+</div>
+</div>
+<p>Substantively, when might be interested in the CACE? When might we not?</p>
+<ul>
+<li>Caution: is compliance data accurate? is compliance rate low or high?</li>
+</ul>
+</section>
+<section id="design-based-approach-to-help-measure-compliance" class="level3" data-number="8.3.3">
+<h3 data-number="8.3.3" class="anchored" data-anchor-id="design-based-approach-to-help-measure-compliance"><span class="header-section-number">8.3.3</span> Design-based approach to help measure compliance</h3>
+<p>Use a placebo treatment (e.g., Broockman and Kalla), which may allow you to observe compliance in both the treatment and control conditions.</p>
+<p><img src="images/bkflow.png" class="img-fluid" style="width:70.0%"></p>
+<p>Note that Broockman and Kalla report Complier Average Causal Effects comparing those in the assigned treatment and placebo conditions.</p>
+<p><img src="images/bkfig1.png" class="img-fluid" style="width:60.0%"></p>
+<p>In their supplemental materials, they note how this is calculated: “501 voters identified themselves at the door after the initial greeting that did not differ by condition.”</p>
+<ul>
+<li>Note this gives them justification for subsetting and comparing these individuals</li>
+</ul>
+<p>“Canvassers then either began an intervention conversation or a placebo conversation. Of the 246 voters who identified themselves at their doors in the treatment group, 192 began the conversation and at least described their initial view on the law to the canvasser, rather than refusing to talk at all after identifying themselves. On the other hand, the treatment was inadvertendly delivered to 11 individuals in the placebo group due to canvasser error.”</p>
+<ul>
+<li>“Consistent with our pre-analysis plan, we report estimated complier average causal effects for the intervention under the assumptions that 1) there was no effect of the intervention for the voters who immediately refused to talk, and 2) there are no defiers; that is, no voters only received the intervention if they were assigned to the placebo group yet would not have received it were they actually in the treatment group.”</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./07-ethics.html" class="pagination-link" aria-label="Ethics and Sampling Considerations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Ethics and Sampling Considerations</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
