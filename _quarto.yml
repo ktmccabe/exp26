@@ -15,6 +15,7 @@ book:
     - 06-conjoints.qmd
     - 07-ethics.qmd
     - 08-FieldExperiments.qmd
+    - 09-QuasiNaturalExperiments
   page-navigation: true
   sidebar:
     style: docked

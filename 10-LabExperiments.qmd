@@ -1,0 +1,103 @@
+# Lab Experiments and Behavioral Games {#lab}
+
+In this section, we will discuss lab experiments and behavioral games:
+
+- Falk, Armin and James J. Heckman, “Lab Experiments Are a Major Source of Knowledge in the Social Sciences.“ Science 23 October 2009: 326 (5952), 535-538. http://www.sciencemag.org/content/326/5952/535.abstractLinks to an external site.
+
+Applications for Discussion:
+
+- Gilligan, Michael J and Pasquale, Benjamin J and Samii, Cyrus. 2014. “Civil war and social cohesion: Lab-in-the-field evidence from NepalOpen this document with ReadSpeaker docReader .” AJPS 58(3): 604-19.
+- Kim, E. (2023), Entertaining Beliefs in Economic MobilityOpen this document with ReadSpeaker docReader . American Journal of Political Science, 67: 39-54. https://doi.org/10.1111/ajps.12702Links to an external site.
+- Eckel, Catherine and Phillip J. Grossman. 1995. “Altruism in Anonymous Dictator GamesOpen this document with ReadSpeaker docReader .” Games and Economic Behavior 16: 181-91.
+- Interesting IR emotions application: Renshon, J., Lee, J.J. and Tingley, D. (2015), Physiological Arousal and Political Beliefs. Political Psychology,Open this document with ReadSpeaker docReader 36: 569-585. https://doi.org/10.1111/pops.12173Links to an external site.
+- Focused on race: White, Ismail, Chryl Laird, and Troy D. Allen. 2014. “Selling Out?: The Politics of NavigatingConflicts between Racial Group Interest and Self-interestOpen this document with ReadSpeaker docReader .” American Political Science Review 108(4):783-800.
+
+
+We will sketch out the answers to these questions as a group. Along the way, we will try to build a research design for a research question we come up with as a class.
+
+```{=html}
+<style>
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+
+</style>
+```
+
+## Lab Experimental Designs
+
+***What makes a lab experiment a lab experiment?***
+
+<p class="comment">
+
+Your ideas ...
+
+</p>
+
+
+***Where would we place lab experiments along the folowing dimensions:***
+
+- Internal validity- correctness of procedures
+- Construct validity- match between data and theoretical constructs
+- External validity- how can results generalize to other situations
+
+<p class="comment">
+
+Your ideas ...
+
+</p>
+
+
+***When do you think it is best to do a lab experiment vs. a survey, field or natural experiment?***
+
+Let's develop pros and cons of each [here](https://docs.google.com/document/d/1H42sQrvnEVe4Sf7xQD_Z0qxNRhCRZNsNlP7oRQyfPhQ/edit?usp=sharing)
+
+
+Falk and Heckman note: ***"Observing behavior in the field is in general not more interesting or informative than observing behavior in the lab." Reactions?*** 
+
+<p class="comment">
+
+Your ideas ...
+
+</p>
+
+From Kim (2023), ***What makes a lab-in-the-field experiment unique? Are there tradeoffs with this approach***
+
+![Kim 2023 Figure 2](images/labinthefield.png)
+
+<p class="comment">
+
+Your ideas ...
+
+</p>
+
+
+## Behavioral games
+
+***Are behavioral games experiments? when?***
+
+<p class="comment">
+
+Your ideas ...
+
+</p>
+
+
+***Why use behavioral games to measure concepts instead of just asking people?***
+
+<p class="comment">
+
+Your ideas ...
+
+</p>
+
+
+
+
+
+
