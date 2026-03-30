@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>9&nbsp; Quasi and Natural Experiments – Experiments 2026</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./08-FieldExperiments.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-ad70adc083ad543d9e6e22aa619c5cad.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./09-QuasiNaturalExperiments.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Quasi and Natural Experiments</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Experiments 2026</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Notes</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-Experimentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Why Experiment?</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-CausalEffects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Causal Effects</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Experimental Design</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-Uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Uncertainty</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-Visualization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualization</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-conjoints.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conjoints</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-ethics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Ethics and Sampling Considerations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-FieldExperiments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Field Experiments</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-QuasiNaturalExperiments.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Quasi and Natural Experiments</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Section Contents</h2>
+   
+  <ul>
+  <li><a href="#what-makes-an-experiment-not-an-experiment" id="toc-what-makes-an-experiment-not-an-experiment" class="nav-link active" data-scroll-target="#what-makes-an-experiment-not-an-experiment"><span class="header-section-number">9.1</span> What makes an experiment not an experiment?</a>
+  <ul>
+  <li><a href="#what-is-a-natural-experiment" id="toc-what-is-a-natural-experiment" class="nav-link" data-scroll-target="#what-is-a-natural-experiment"><span class="header-section-number">9.1.1</span> What is a natural experiment?</a></li>
+  </ul></li>
+  <li><a href="#exploiting-exogenous-policy-changes-and-events" id="toc-exploiting-exogenous-policy-changes-and-events" class="nav-link" data-scroll-target="#exploiting-exogenous-policy-changes-and-events"><span class="header-section-number">9.2</span> Exploiting Exogenous Policy Changes and Events</a>
+  <ul>
+  <li><a href="#unexpected-event-design" id="toc-unexpected-event-design" class="nav-link" data-scroll-target="#unexpected-event-design"><span class="header-section-number">9.2.1</span> Unexpected Event Design</a></li>
+  <li><a href="#differences-in-differences" id="toc-differences-in-differences" class="nav-link" data-scroll-target="#differences-in-differences"><span class="header-section-number">9.2.2</span> Differences in Differences</a></li>
+  </ul></li>
+  <li><a href="#regression-discontinuity" id="toc-regression-discontinuity" class="nav-link" data-scroll-target="#regression-discontinuity"><span class="header-section-number">9.3</span> Regression Discontinuity</a>
+  <ul>
+  <li><a href="#sharp-rd" id="toc-sharp-rd" class="nav-link" data-scroll-target="#sharp-rd"><span class="header-section-number">9.3.1</span> Sharp RD</a>
+  <ul class="collapse">
+  <li><a href="#sharp-vs.-fuzzy" id="toc-sharp-vs.-fuzzy" class="nav-link" data-scroll-target="#sharp-vs.-fuzzy"><span class="header-section-number">9.3.1.1</span> Sharp vs.&nbsp;Fuzzy</a></li>
+  </ul></li>
+  <li><a href="#application-in-r" id="toc-application-in-r" class="nav-link" data-scroll-target="#application-in-r"><span class="header-section-number">9.3.2</span> Application in R</a></li>
+  <li><a href="#considerations-in-rd-design" id="toc-considerations-in-rd-design" class="nav-link" data-scroll-target="#considerations-in-rd-design"><span class="header-section-number">9.3.3</span> Considerations in RD Design</a></li>
+  <li><a href="#rd-visualizations" id="toc-rd-visualizations" class="nav-link" data-scroll-target="#rd-visualizations"><span class="header-section-number">9.3.4</span> RD Visualizations</a></li>
+  <li><a href="#fuzzy-rd-application" id="toc-fuzzy-rd-application" class="nav-link" data-scroll-target="#fuzzy-rd-application"><span class="header-section-number">9.3.5</span> Fuzzy RD Application</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="quasi" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Quasi and Natural Experiments</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In this section, we will discuss quasi- and natural experiments. Here are a few sources we will draw upon for the discussion.</p>
+<ul>
+<li>Thad Dunning’s <a href="https://www.cambridge.org/core/books/natural-experiments-in-the-social-sciences/96A64CBDC2A2952DC1C68AF77DE675AF">book</a>
+<ul>
+<li>Sekhon, Jasjeet S., and Rocio Titiunik. 2012. “When Natural Experiments Are Neither Natural Nor Experiments.” <em>American Political Science Review</em>, 106 (1): 35-57.</li>
+</ul></li>
+<li>RDD: Michael Barber, Daniel M. Butler and Jessica Preece (2016), “Gender Inequalities in Campaign Finance”, Quarterly Journal of Political Science: Vol. 11: No.&nbsp;2, pp 219-248. http://dx.doi.org/10.1561/100.00015126</li>
+<li>DiD and Unexpected Event: HOLMAN, M., MEROLLA, J., &amp; ZECHMEISTER, E. (2021). The Curious Case of Theresa May and the Public That Did Not Rally: Gendered Reactions to Terrorist Attacks Can Cause Slumps Not Bumps. American Political Science Review, 1-16. doi: 10.1017/S0003055421000861</li>
+<li>Instrumental Variables: Rossiter, Erin Leigh, and Jeffrey Harden. “The Development of an Issue Public: Evidence from The Eras Tour.” (2024). The Journal of Politics</li>
+</ul>
+<section id="what-makes-an-experiment-not-an-experiment" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="what-makes-an-experiment-not-an-experiment"><span class="header-section-number">9.1</span> What makes an experiment not an experiment?</h2>
+<p>Earlier we outlined the characteristics that made a research design an experiment. These included things like “randomization” and “manipulation of treatment” and “control” from the researcher. These characteristics were important to give us confidence that we were identifying not just correlations, but “causal” effects.</p>
+<p>In this section, we begin to look at designs where these are not feasible. Can we still make causal claims in these settings, or is this a doomed adventure?</p>
+<p><img src="images/rctjoke.png" class="img-fluid" style="width:50.0%"></p>
+<section id="what-is-a-natural-experiment" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="what-is-a-natural-experiment"><span class="header-section-number">9.1.1</span> What is a natural experiment?</h3>
+<style>
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+
+</style>
+<p>First, let’s think about what separates a “randomized controlled experiment” from a “natural experiment” from something that just isn’t an “experiment.”</p>
+<p><strong><em>What is the difference in how the treatment is administered?</em></strong></p>
+<p class="comment">
+</p><p>Your ideas …</p>
+<p></p>
+<p>We want whatever variable that stands in as our “treatment” to be plausibly “exogenous” in our design/model: “Exogeneity implies that the treatment and control groups created by the natural experiment are similar in terms of all observed and unobserved factors that may affect the outcome of interest, with the exception of the treatment and confounders that the researcher controls for.” (Sekhon and Titiunik)</p>
+<p><strong><em>How do we identify treatment and control comparison groups?</em></strong></p>
+<p class="comment">
+</p><p>Your ideas …</p>
+<p></p>
+<p>Even without a randomized treatment, we can still think about the logic of our experimental design along the same way as the diagram below. We just need to think more carefully about our assumptions and potentially make adjustments to our design or modelling to help reduce the potential for selection bias or violations to excludability.</p>
+<ul>
+<li>Cross-sectional between subjects</li>
+<li>Before vs.&nbsp;After</li>
+<li>Differences-in-Differences</li>
+</ul>
+<p><img src="images/typesofdesigns.png" class="img-fluid"></p>
+<p>For example, we could investigate the comparisons in the Sekhon and Titiunik discussion of the Grofman et al.&nbsp;work on legislator movement between the House and Senate.</p>
+<p><img src="images/grof1.png" class="img-fluid" style="width:50.0%"></p>
+<p>Design 3 is an example of before vs.&nbsp;after. As the authors note, here we can rule out confounders related to the individuals, as we are comparing the same units across time. However, we have to assume a “change in behavior of moving House members between <span class="math inline">\(t - 1\)</span> and <span class="math inline">\(t\)</span> can only be attributed to the movement from the House to the Senate if other factors that affect roll-call voting are held constant between these two period…that moving House members would not have changed their behavior between <span class="math inline">\(t- 1\)</span> and <span class="math inline">\(t\)</span> if they had stayed in the House.”</p>
+</section>
+</section>
+<section id="exploiting-exogenous-policy-changes-and-events" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="exploiting-exogenous-policy-changes-and-events"><span class="header-section-number">9.2</span> Exploiting Exogenous Policy Changes and Events</h2>
+<p>We will use the application from “The Curious Case of Theresa May and the Public That Did Not Rally: Gendered Reactions to Terrorist Attacks Can Cause Slumps Not Bumps” by Mirya Holman, Jennifer Merolla, and Elizabeth Zechmeister published in 2021 in the <em>American Political Science Review.</em> doi: 10.1017/S0003055421000861</p>
+<p>Research Question: How does leader gender influence the rally around the flag effect? Do people rally around the flag for women leaders?</p>
+<ul>
+<li>Application: They look at the impact of a terrorist attack on support for Theresa May.
+<ul>
+<li>The May 22, 2017 Manchester Bombing occurred during the fielding of the 2017 British Election Study</li>
+<li>As the authors note on pg. 252, the treatment (the terrorist attack) occurred “as if” random with respect to the timing of individuals’ survey responses about the likeability of May and preference for prime minister.
+<ul>
+<li>Note that similar to a regression discontinuity design, they restrict the “bandwidth” around the attack to include survey responses close to the attack.</li>
+</ul></li>
+</ul></li>
+</ul>
+<section id="unexpected-event-design" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="unexpected-event-design"><span class="header-section-number">9.2.1</span> Unexpected Event Design</h3>
+<p>The authors use the following justification for an unexpected event during survey design.</p>
+<ul>
+<li>“The event was unanticipated by all except the attacker and their confidants and there is an exogenous assignment of the treatment and control groups from random survey rollout.”</li>
+<li>“We can thus compare responses of individuals in the control group (i.e., those who took the survey before the Manchester Bombing) and the treatment group (i.e., those who took that same survey after the Manchester Bombing).</li>
+</ul>
+<p>This represents a between-subjects version of a before-after design.</p>
+<p>Key Assumptions</p>
+<ul>
+<li>Treatment assignment as-if random. While this assumption is not fully testable, we can partially examine it by comparing the treatment and control groups on a number of variables that should not differ between the groups (e.g., demographics). See pg. 253</li>
+<li>No other events/changes influence before-after trend. What if it was an economic decline? Or effects of Brexit? See pgs. 257-258.</li>
+</ul>
+<p><strong><em>Analysis and Results</em></strong></p>
+<p>The authors run a regression analysis to compare the favorability of May among those surveyed after the attack (<span class="math inline">\(Y_i(1) | d_i =\)</span> surveyed after) to the favorability of May among those surveyed before the attack (<span class="math inline">\(Y_i(0) | d_i =\)</span> surveyed before).</p>
+<p><img src="images/holman1.png" class="img-fluid" style="width:50.0%"></p>
+<p>How can we interpret the -.332 result in the first column?</p>
+</section>
+<section id="differences-in-differences" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="differences-in-differences"><span class="header-section-number">9.2.2</span> Differences in Differences</h3>
+<p>The authors also place their framework into a differences-in-differences design. The British Election Study is a panel survey with multiple waves with the attack ocurring in Wave 12. The previous analysis used only the 12th wave. In this analysis, we compare the <strong><em>trends</em></strong> in support for May among those who were eventually treated with the terror attack in the 12th wave to those who went untreated in the 12th wave.</p>
+<p>Below is a stylized way to think about difference-in-difference designs.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/didplot.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption><em>Matt Blackwell, Harvard University</em></figcaption>
+</figure>
+</div>
+<p>The authors interact the treatment variable (whether respondents were exposed to the terrorist attack in Wave 12) with a time variable indicating in the favorability of May was measured prior to or in Wave 12.</p>
+<ul>
+<li>This interaction represents the causal effect of the terrorist attack on May’s favorability by comparing the trend in opinion among the treatment and control group.</li>
+</ul>
+<p><img src="images/holman2.png" class="img-fluid" style="width:50.0%"></p>
+<p>Key Assumption of Differences in Differences</p>
+<ul>
+<li>Parallel Trends: In the absence of treatment, the trend/slope of the control group and treatment group would be the same.</li>
+</ul>
+</section>
+</section>
+<section id="regression-discontinuity" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="regression-discontinuity"><span class="header-section-number">9.3</span> Regression Discontinuity</h2>
+<p>Strategy for causal inference in observational studies</p>
+<ul>
+<li>Exploits a point of discontinuity that can be attributed to an <strong><em>exogenous treatment</em></strong> (influenced/determined by an outside force– think physical boundaries, rules, policy inclusion/exclusion thresholds)</li>
+<li>Compare units “close to” discontinuity, assuming similar except on either side of threshold</li>
+<li>Strong internal validity, low generalizability away from discontinuity</li>
+</ul>
+<section id="sharp-rd" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="sharp-rd"><span class="header-section-number">9.3.1</span> Sharp RD</h3>
+<p>We observe the treated potential outcome if a unit is above some threshold <span class="math inline">\(c\)</span> along the “running/forcing” variable <span class="math inline">\(X\)</span>. Otherwise, we observe the untreated potential outcome.</p>
+<p><span class="math display">\[\begin{equation*}
+  Y_i =(1 - d_i)Y_i(0) + d_iY_i(1)=\begin{cases}
+    Y_i(1), &amp; \text{if $X_i &gt; c$}.\\
+    Y_i(0), &amp; \text{if $X_i \leq c$}.
+  \end{cases}
+\end{equation*}\]</span> where <span class="math inline">\(c\)</span> is a threshold/point of discontinuity</p>
+<p>Our causal effect of interest is still <span class="math inline">\(Y_i(1) - Y_i(0)\)</span>, but we still struggle from the same fundamental problem of causal inference.</p>
+<p>In RD designs, similar to common experimental analyses, we will estimate an average treatment effect by comparing an average outcome among the treated units to the control units.</p>
+<ul>
+<li>However, we only look at units close to the discontinuity. It is here where we think treatment assignment is plausibly exogenous. Why?</li>
+<li>This then influences our interpretation of the average effect. It is no longer the average effect of all units. Instead it is a “local average treatment effect” for units at the point of discontinuity.</li>
+</ul>
+<section id="sharp-vs.-fuzzy" class="level4" data-number="9.3.1.1">
+<h4 data-number="9.3.1.1" class="anchored" data-anchor-id="sharp-vs.-fuzzy"><span class="header-section-number">9.3.1.1</span> Sharp vs.&nbsp;Fuzzy</h4>
+<p>In a fuzzy regression design, the rule/threshold only influences the <em>probability</em> of treatment status and does not determine it.</p>
+<ul>
+<li>You can think of this as similar to the encouragement designs from last section</li>
+<li>We estimate the local average treatment effects in fuzzy regression discontinuity using the same two-stage regression model with instrumental variables regression that we did there. In class we will primarily focus on sharp RD.</li>
+</ul>
+</section>
+</section>
+<section id="application-in-r" class="level3" data-number="9.3.2">
+<h3 data-number="9.3.2" class="anchored" data-anchor-id="application-in-r"><span class="header-section-number">9.3.2</span> Application in R</h3>
+<p>We will use a regression discontinuity design to estimate whether female state legislative incumbents have more trouble fundraising than do male legislative incumbents. Observations consist of information on all U.S. state legislative races in which a male and female candidate ran against each other. This is based on the article:</p>
+<ul>
+<li>Barber, Michael, Daniel Butler, and Jessica Preece. 2016. ``Gender Inequalities in Campaign Finance.http://dx.doi.org/10.1561/100.00015126 Quarterly Journal of Political Science 11(2): 219-248.</li>
+</ul>
+<p>Note the authors’ discussion of possible research designs on pg. 22-225.</p>
+<ul>
+<li>Option 1: “Most studies focus on the amount of money that candidates raise, comparing the amount raised by similar male and female candidates. On the most basic level, this is done by estimating a model that controls for other relevant factors and tests to see whether women raise more or less money than men.”
+<ul>
+<li>“It relies on the important assumption that the model accounts for all other relevant variables. If not, then omitted variable bias can affect the estimates. Omitted variable bias is particularly likely to be a problem when studying gender and fundraising because, as Palmer and Simon (2006) show, women and men represent districts that are very different on average… when we compare men and women we cannot rule out that any results simply reflect the differences in district characteristics and have nothing to do with the politician’s sex.”</li>
+</ul></li>
+<li>Chosen Option: “Rather than trying to control for all possible confounding factors, we use a regression discontinuity design to identify incumbents who represent districts that are otherwise similar.”
+<ul>
+<li>Assumption: Random assignment of the treatment <strong><em>in the neighborhood of the treatment threshold</em></strong></li>
+<li>“In this case, we consider races where male and female candidates face off and use the proportion of the votes won by the female candidate as the variable that determines treatment assignment:” whether or not a district has a male or female incumbent (226).</li>
+<li>“We then compare the fundraising by the male winners and female winners in the following election cycle. Differences between these two groups of legislators should be due purely to gender differences because district and electoral factors are balanced between the treatment and control groups of legislators.” (226-227).</li>
+</ul></li>
+</ul>
+<p>The data file you will use is <code>fundsub.csv</code>, a CSV data file.</p>
+<p>The independent variables are the winning (incumbent) candidate’s gender and the vote share the female candidate received in the election.</p>
+<ul>
+<li><code>male.winner</code>: Coded 1= a man won the election and 0= a woman won the election in the most recent election in a legislative district (time <span class="math inline">\(t\)</span>)</li>
+<li><code>female.margin</code>: The two-candidate vote share that the woman candidate won in the most recent election in a legislative district in time <span class="math inline">\(t\)</span> (if above 50 a woman won, if a below 50, a man won</li>
+</ul>
+<p>The outcome variable is the amount the winning candidate in a given election (which could be male or female) raised in their <em>next</em> election cycle. We will analyze their data to help determine if male winning candidates raise more money than female winning candidates in their subsequent election cycles when they are incumbents.</p>
+<ul>
+<li><code>total.candidate.raised</code>: Amount raised by the winning candidate (i.e., the incumbent) in the subsequent election cycle (time <span class="math inline">\(t+1\)</span>)</li>
+<li><code>log.total.candidate.raised</code>: The log of the total amount raised by the winning candidate (i.e., the incumbent) in the subsequent election cycle (time <span class="math inline">\(t +1\)</span>)
+<ul>
+<li>Because the fundraising data is heavily skewed, researchers used the log of the variable instead of the raw variable. This makes our data look more “normal” in distribution because it compresses the scale</li>
+</ul></li>
+<li><code>log.total.dist.last</code>: The log of the total spending in the district in the previous election cycle (time <span class="math inline">\(t - 1\)</span>)</li>
+</ul>
+<p>Let’s load the data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>fund <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"fundsub.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We need to locate <span class="math inline">\(X\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(Y\)</span>, and a variable that determines if we observe a subject’s treated potential outcome <span class="math inline">\(Y_i(1)\)</span> or untreated potential outcome <span class="math inline">\(Y_i(0\)</span>).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## X is the running/forcing variable</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="do">## X &gt; 50 means a female candidate won</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(fund<span class="sc">$</span>female.margin[fund<span class="sc">$</span>male.winner <span class="sc">==</span><span class="dv">0</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 50.00000 99.11157</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## X &lt; 50 means a male candidate won</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(fund<span class="sc">$</span>female.margin[fund<span class="sc">$</span>male.winner <span class="sc">==</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  1.245026 49.992115</code></pre>
+</div>
+</div>
+<p>To make our regression easier to interpret, we should also center our forcing variable on 50, such that when this variable is 0, that is our threshold of winning.</p>
+<ul>
+<li>We will create a new variable called <code>forcing.variable</code> that does this. In addition, to match the authors, we actually want the variable to be in a direction where positive values mean that the male candidates were winners (and negative, female winners).</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>fund<span class="sc">$</span>forcing.variable <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">1</span><span class="sc">*</span>(fund<span class="sc">$</span>female.margin <span class="sc">-</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We are going to compare the amount of money raised among incumbents who are male vs.&nbsp;incumbents who are female using a regression discontinuity design. Let’s replicate the first column of Table 1 in their paper.</p>
+<p><img src="images/barber1.png" class="img-fluid" style="width:40.0%"></p>
+<ul>
+<li>Following the researchers, we are going to restrict our analysis to compare candidates who won races that were competitive: within +/- 2 percentage points in vote share. We also want to remove ties, cases where the female margin is 50.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>rsub <span class="ot">&lt;-</span> <span class="fu">subset</span>(fund, female.margin <span class="sc">&gt;</span> <span class="dv">48</span> <span class="sc">&amp;</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                 female.margin <span class="sc">&lt;</span> <span class="dv">52</span> <span class="sc">&amp;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                 female.margin <span class="sc">!=</span><span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>There are many different ways to estimate a regression discontunity local average treatment effect that range from simple to complex.</p>
+<ul>
+<li>What bandwidth to choose? How do you choose it?</li>
+<li>Allow slopes to differ on either side of discontinuity?</li>
+<li>Should you account for potential non-linearities, in what way?</li>
+<li>Should you weight observations differently, according to proximity to threshold?</li>
+<li>Should you include covariates? Which covariates?</li>
+</ul>
+<p>Most simple: Treat observations on a particular side of discontinuity as exchangeable and calculate a simple difference-in-means.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>uniform <span class="ot">&lt;-</span> <span class="fu">lm</span>(log.total.raised.candidate <span class="sc">~</span> male.winner, </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">data =</span> rsub)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(uniform)[<span class="st">"male.winner"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>male.winner 
+  0.3333058 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">## This is equivalent to</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(rsub<span class="sc">$</span>log.total.raised.candidate[rsub<span class="sc">$</span>male.winner <span class="sc">==</span> <span class="dv">1</span>]) <span class="sc">-</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>(rsub<span class="sc">$</span>log.total.raised.candidate[rsub<span class="sc">$</span>male.winner <span class="sc">==</span> <span class="dv">0</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3333058</code></pre>
+</div>
+</div>
+<ul>
+<li>We find that male legislators who barely win election against a female candidate go on to raise more money overall in the next election cycle than female candidates who barely win against male candidates.</li>
+</ul>
+<p>Allow the vote margin to have a linear slope on either side of the discontinuity that can influence the outcome.</p>
+<ul>
+<li>Use an interaction term.</li>
+<li>Estimate the effect of a male (vs.&nbsp;female) winning the election when the forcing variable is zero.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>linear <span class="ot">&lt;-</span> <span class="fu">lm</span>(log.total.raised.candidate <span class="sc">~</span> male.winner<span class="sc">*</span>forcing.variable, </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">data =</span> rsub)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(linear)[<span class="st">"male.winner"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>male.winner 
+  0.8137722 </code></pre>
+</div>
+</div>
+<p>Allow an algorithm to choose the bandwidth instead of relatively arbitrarily choosing +/- 2. To do this, we will use the <code>rdrobust</code> package in R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"rdrobust"</span>, <span class="at">dependencies =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Open the package</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rdrobust)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="do">## remove ties</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>rdprep <span class="ot">&lt;-</span> <span class="fu">subset</span>(fund, female.margin <span class="sc">!=</span><span class="dv">50</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>rdb <span class="ot">&lt;-</span> <span class="fu">rdrobust</span>(<span class="at">y=</span>rdprep<span class="sc">$</span>log.total.raised.candidate,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">x=</span>rdprep<span class="sc">$</span>forcing.variable, </span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">kernel =</span> <span class="st">"uniform"</span>, </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">p=</span><span class="dv">1</span>, </span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">bwselect =</span> <span class="st">"mserd"</span>)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(rdb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Sharp RD estimates using local polynomial regression.
+
+Number of Obs.                 2863
+BW type                       mserd
+Kernel                      Uniform
+VCE method                       NN
+
+Number of Obs.                 1439         1424
+Eff. Number of Obs.             516          527
+Order est. (p)                    1            1
+Order bias  (q)                   2            2
+BW est. (h)                   7.185        7.185
+BW bias (b)                  13.478       13.478
+rho (h/b)                     0.533        0.533
+Unique Obs.                    1438         1424
+
+=====================================================================
+                   Point    Robust Inference
+                Estimate         z     P&gt;|z|      [ 95% C.I. ]       
+---------------------------------------------------------------------
+     RD Effect     0.296     1.717     0.086    [-0.050 , 0.761]     
+=====================================================================</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## rdd effect</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>rdb<span class="sc">$</span>coef[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2962745</code></pre>
+</div>
+</div>
+<p>Note: we could use <code>rdrobust</code> to recover the estimate we already calculated by setting a specific bandwidth <code>h=2</code> to reflect the +/- 2.</p>
+<details>
+<summary>
+Expand for the answer.
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>rdbold <span class="ot">&lt;-</span> <span class="fu">rdrobust</span>(<span class="at">y=</span>rdprep<span class="sc">$</span>log.total.raised.candidate,</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">x=</span>rdprep<span class="sc">$</span>forcing.variable, </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">kernel =</span> <span class="st">"uniform"</span>, </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">p=</span><span class="dv">1</span>, </span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">h=</span><span class="dv">2</span>)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>rdbold<span class="sc">$</span>coef[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8137722</code></pre>
+</div>
+</div>
+</details>
+<p>We can also adjust the weighting of observations to weight observations closer to the discontinuity more heavily than those far away. In addition, instead of assuming a linear slope on either side, we could allow the slope to be non-linear, such as quadratic.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="do">## remove ties</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>rdb2 <span class="ot">&lt;-</span> <span class="fu">rdrobust</span>(<span class="at">y=</span>rdprep<span class="sc">$</span>log.total.raised.candidate,</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">x=</span>rdprep<span class="sc">$</span>forcing.variable, </span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">kernel =</span> <span class="st">"triangular"</span>, <span class="co"># implements a type of weighting </span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">p=</span><span class="dv">2</span>, <span class="co"># shifts to quadratic </span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">bwselect =</span> <span class="st">"mserd"</span>)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(rdb2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Sharp RD estimates using local polynomial regression.
+
+Number of Obs.                 2863
+BW type                       mserd
+Kernel                   Triangular
+VCE method                       NN
+
+Number of Obs.                 1439         1424
+Eff. Number of Obs.             885          923
+Order est. (p)                    2            2
+Order bias  (q)                   3            3
+BW est. (h)                  12.894       12.894
+BW bias (b)                  18.107       18.107
+rho (h/b)                     0.712        0.712
+Unique Obs.                    1438         1424
+
+=====================================================================
+                   Point    Robust Inference
+                Estimate         z     P&gt;|z|      [ 95% C.I. ]       
+---------------------------------------------------------------------
+     RD Effect     0.450     1.971     0.049     [0.003 , 0.990]     
+=====================================================================</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="do">## rdd effect</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>rdb2<span class="sc">$</span>coef[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.4496329</code></pre>
+</div>
+</div>
+<p>We see a positive local average treatment effect of male winners on fundraising in each specification, but whether this is significant depends on the specification. The choice should consider tradeoffs in bias created by expanding the bandwidth vs.&nbsp;variance, which may be affected by changing the sample size.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="09-QuasiNaturalExperiments_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="considerations-in-rd-design" class="level3" data-number="9.3.3">
+<h3 data-number="9.3.3" class="anchored" data-anchor-id="considerations-in-rd-design"><span class="header-section-number">9.3.3</span> Considerations in RD Design</h3>
+<p>Remember: This is a local average treatment effect only</p>
+<ul>
+<li>Potentially poor generalizability</li>
+<li>Should incorporate placebo and design tests to help justify assumptions
+<ul>
+<li>E.g., The discontinuity should influence what you hypothesize it to influence and should NOT influence something you do not hypothesize it to influence</li>
+<li>E.g., Check for sorting around the threshold</li>
+</ul></li>
+<li>Recommend you review documentation for <code>rdrobust</code> before using it in your own work <a href="https://rdpackages.github.io/rdrobust/">here</a></li>
+<li>May also be interested in <a href="https://www.cambridge.org/core/books/practical-introduction-to-regression-discontinuity-designs/F04907129D5C1B823E3DB19C31CAB905"><em>A Practical Introduction to Regression Discontinuity Designs</em></a> by Cattaneo, Idrobo, and Titiunik</li>
+</ul>
+<p><strong><em>Example: Placebo Analysis</em></strong></p>
+<p>We assume that treatment assignment is “as-if” random around the cutpoint (discontinuity).</p>
+<ul>
+<li>This means that any pre-treatment covariates should be continuous at the cutpoint, just as pre-treatment covariates should be balanced across conditions in an experiment.</li>
+<li>Any evidence that there is a significant discontinuity effect on a pre-treatment covariate would be evidence that perhaps we do not have an as-if random design.</li>
+</ul>
+<p>Let’s do one test of this. Let’s repeat our original RDD model of a +/-2 bandwidth, but now let’s have the outcome be the total spending in the district in a previous election in t-1. Run the model and interpret the results in light of the design assumptions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>fit.sorting <span class="ot">&lt;-</span> <span class="fu">lm</span>(log.total.dist.last <span class="sc">~</span> male.winner<span class="sc">*</span>forcing.variable,</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">data=</span>rsub)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit.sorting)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We see a null effect here, which helps lend support that this “pre-treatment” covariate is balanced around the discontinuity. If, instead, it were significant, that might call into question that a male vs.&nbsp;female winner is “as-if” random in close elections.</p>
+</section>
+<section id="rd-visualizations" class="level3" data-number="9.3.4">
+<h3 data-number="9.3.4" class="anchored" data-anchor-id="rd-visualizations"><span class="header-section-number">9.3.4</span> RD Visualizations</h3>
+<p>One benefit of the <code>rdrobust</code> package is that it makes it fairly easy to implement common visualizations of the RDD.</p>
+<ul>
+<li>A few examples with different specifications</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rdplot</span>(<span class="at">y=</span> rdprep<span class="sc">$</span>log.total.raised.candidate,</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">x=</span>rdprep<span class="sc">$</span>female.margin,</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">kernel=</span><span class="st">"uniform"</span>,  <span class="at">p=</span><span class="dv">1</span>, <span class="at">c=</span><span class="dv">50</span>, </span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">title=</span><span class="st">"RD Plot: Candidate Fundraising"</span>,</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">y.label=</span><span class="st">"Fundraising at time t+1"</span>, </span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">x.label=</span><span class="st">"Female Vote Share in Election at time t"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="09-QuasiNaturalExperiments_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rdplot</span>(<span class="at">y=</span> rdprep<span class="sc">$</span>log.total.raised.candidate,</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">x=</span>rdprep<span class="sc">$</span>female.margin,</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">kernel=</span><span class="st">"triangular"</span>,  <span class="at">p=</span><span class="dv">2</span>, <span class="at">c=</span><span class="dv">50</span>,</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">title=</span><span class="st">"RD Plot: Candidate Fundraising"</span>,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">y.label=</span><span class="st">"Fundraising at time t+1"</span>, </span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">x.label=</span><span class="st">"Female Vote Share in Election at time t"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="09-QuasiNaturalExperiments_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="fuzzy-rd-application" class="level3" data-number="9.3.5">
+<h3 data-number="9.3.5" class="anchored" data-anchor-id="fuzzy-rd-application"><span class="header-section-number">9.3.5</span> Fuzzy RD Application</h3>
+<p>We will adapt the example from <a href="https://evalf20.classes.andrewheiss.com/example/rdd-fuzzy/">Andrew Heiss</a>, which evaluates the effectiveness of a tutoring program on performance on a school’s exit exam.</p>
+<ul>
+<li>Here, students become eligible for the tutoring program if they score 70 or below on an exam at the beginning of the school year.</li>
+<li>However, students are not forced to take this program, and some students may still be able to enroll in tutoring even if they scored above 70. In short we have a <strong><em>compliance</em></strong> issue, just as we discussed compliance issues in encouragement designs for field experiments.
+<ul>
+<li>Compliers are those that enroll in the tutoring program if and only if they scored 70 or below.</li>
+</ul></li>
+<li>Our goal with a fuzzy regression design is to estimate the LATE, the complier average causal effect for those in the neighborhood of the cutoff.
+<ul>
+<li>In this way, we combine the “local” aspect of sharp RD by estimating effects at a threshold, and the “local” nature of complier effects in that the effect is only applicable for people who are compliers.</li>
+</ul></li>
+</ul>
+<p>Let’s load the data, which can be found linked through his website <a href="https://evalf20.classes.andrewheiss.com/data/tutoring_program_fuzzy.csv">here</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>tutor <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"tutoring_program_fuzzy.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can see the distribution of scores for those in vs.&nbsp;not in the tutoring program. Most people who scored below 70 are in the program (TRUE), but there are also some people who scored above 70 in the program. Likewise, most people who scored above 70 are not in the program, but some that scored below 70 are also not in the program.</p>
+<ul>
+<li>Entrance exam score is <strong><em>predictive</em></strong> of tutoring program uptake but not deterministically so.
+<ul>
+<li>Being below vs.&nbsp;above the cutoff is like the “encouragement” for whether someone takes vs.&nbsp;does not take the tutoring program, which is the “treatment.”</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.5.2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(tutor, <span class="fu">aes</span>(<span class="at">x=</span>entrance_exam, <span class="at">group=</span>tutoring, <span class="at">color=</span>tutoring))<span class="sc">+</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()<span class="sc">+</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept=</span><span class="dv">70</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="09-QuasiNaturalExperiments_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We will now combine our two frameworks 1) Sharp RD and 2) Encouragement Designs to estimate our local average treatment effect for compliers.</p>
+<p>Getting our data ready for the RD framework.</p>
+<ul>
+<li>We will center the entrance exam score on the cutoff of 70 so that we can interpret the variable as distance from the threshold.</li>
+<li>We will create our “instrument” variable by creating a variable that indicates if someone was below the cutoff ( = 1) vs.&nbsp;above the cutoff (= 0)</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>tutor<span class="sc">$</span>forcing  <span class="ot">&lt;-</span> tutor<span class="sc">$</span>entrance_exam <span class="sc">-</span> <span class="dv">70</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>tutor<span class="sc">$</span>below <span class="ot">&lt;-</span> <span class="cn">NA</span> <span class="co"># initialize variable</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>tutor<span class="sc">$</span>below[tutor<span class="sc">$</span>entrance_exam <span class="sc">&lt;=</span> <span class="dv">70</span>] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>tutor<span class="sc">$</span>below[tutor<span class="sc">$</span>entrance_exam <span class="sc">&gt;</span> <span class="dv">70</span>] <span class="ot">&lt;-</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>We will select a bandwidth of observations near the cutoff score. We will follow the Heiss example and use +/- 10</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>tutor.narrow <span class="ot">&lt;-</span> <span class="fu">subset</span>(tutor, forcing <span class="sc">&gt;=</span> <span class="sc">-</span><span class="dv">10</span> <span class="sc">&amp;</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>                         forcing <span class="sc">&lt;=</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Implementing our CACE two-stage framework.</p>
+<ul>
+<li>Recall that the we use the indicator of being above vs.&nbsp;below the cutoff as an encouragement/instrument for our treatment of being enrolled vs.&nbsp;not enrolled in the tutoring program.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AER)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>fit2stage <span class="ot">&lt;-</span> <span class="fu">ivreg</span>(exit_exam <span class="sc">~</span> forcing<span class="sc">*</span>tutoring <span class="sc">|</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>                     forcing<span class="sc">*</span>below, <span class="at">data =</span> tutor.narrow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In addition to <code>AER</code> the <code>estimatr</code> package also have a two-stage function. They only differ in the default way of calculating standard errors. This function will have slightly more conservative standard errors.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(estimatr)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>fit2stage2 <span class="ot">&lt;-</span> <span class="fu">iv_robust</span>(exit_exam <span class="sc">~</span> forcing<span class="sc">*</span>tutoring <span class="sc">|</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>                     forcing<span class="sc">*</span>below, <span class="at">data =</span> tutor.narrow)</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit2stage2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+iv_robust(formula = exit_exam ~ forcing * tutoring | forcing * 
+    below, data = tutor.narrow)
+
+Standard error type:  HC2 
+
+Coefficients:
+                     Estimate Std. Error t value   Pr(&gt;|t|) CI Lower CI Upper
+(Intercept)           59.9303     1.1714 51.1593 2.352e-177 57.62734  62.2333
+forcing                0.5192     0.2383  2.1785  2.995e-02  0.05066   0.9877
+tutoringTRUE           9.6369     1.9323  4.9873  9.151e-07  5.83820  13.4356
+forcing:tutoringTRUE  -0.1906     0.4953 -0.3849  7.005e-01 -1.16440   0.7831
+                      DF
+(Intercept)          399
+forcing              399
+tutoringTRUE         399
+forcing:tutoringTRUE 399
+
+Multiple R-squared:  0.3619 ,   Adjusted R-squared:  0.3571 
+F-statistic: 8.722 on 3 and 399 DF,  p-value: 1.289e-05</code></pre>
+</div>
+</div>
+<p>We can interpret 9.64 as the causal effect of the tutoring program on exit exam scores for compliers at the score threshold.</p>
+<p>We can also implement the two-stage framework in the <code>rdrobust</code> package, which allows us to let an algorithm set the bandwidth for us and more easily integrate different choices for weighting.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rdrobust)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>fit2rdrob <span class="ot">&lt;-</span> <span class="fu">rdrobust</span>(<span class="at">y=</span>tutor<span class="sc">$</span>exit_exam, <span class="at">x=</span>tutor<span class="sc">$</span>forcing,</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">fuzzy =</span> tutor<span class="sc">$</span>tutoring,</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">kernel =</span> <span class="st">"triangular"</span>)</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit2rdrob)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Fuzzy RD estimates using local polynomial regression.
+
+Number of Obs.                 1000
+BW type                       mserd
+Kernel                   Triangular
+VCE method                       NN
+
+Number of Obs.                  238          762
+Eff. Number of Obs.             170          347
+Order est. (p)                    1            1
+Order bias  (q)                   2            2
+BW est. (h)                  12.985       12.985
+BW bias (b)                  19.733       19.733
+rho (h/b)                     0.658        0.658
+Unique Obs.                     238          762
+
+First-stage estimates.
+
+=====================================================================
+                   Point    Robust Inference
+                Estimate         z     P&gt;|z|      [ 95% C.I. ]       
+=====================================================================
+     Rd Effect    -0.708    -8.424     0.000    [-0.907 , -0.565]    
+=====================================================================
+
+Treatment effect estimates.
+
+=====================================================================
+                   Point    Robust Inference
+                Estimate         z     P&gt;|z|      [ 95% C.I. ]       
+---------------------------------------------------------------------
+     RD Effect     9.683     4.258     0.000     [5.210 , 14.095]    
+=====================================================================</code></pre>
+</div>
+</div>
+<p>Here, the bandwidth selected was closer to 13. With this alternate bandwidth and a triangular weight, we still get a result of 9.68, similar to the other specification.</p>
+<p>Assumptions we made to identify this as a causal effect at the cutoff for compliers:</p>
+<ul>
+<li>That our instrument is relevant. I.e., that the entrance exam cutoff of 70 was indeed predictive of program uptake.</li>
+<li>Exclusion restriction– that our instrument (the cutoff score) only influences the final exam score through the tutoring program. If that cutoff were used for multiple decisions about a student, this may cast doubt on the viability of the assumption.</li>
+<li>Exogeneity- we assume that the cutoff is quasi-random and rule out other possible confounders.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./08-FieldExperiments.html" class="pagination-link" aria-label="Field Experiments">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Field Experiments</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
