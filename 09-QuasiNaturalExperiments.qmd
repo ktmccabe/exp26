@@ -42,7 +42,25 @@ Your ideas ...
 
 </p>
 
-We want whatever variable that stands in as our "treatment" to be plausibly "exogenous" in our design/model: "Exogeneity implies that the treatment and control groups created by the natural experiment are similar in terms of all observed and unobserved factors that may affect the outcome of interest, with the exception of the treatment and confounders that the researcher controls for." (Sekhon and Titiunik)
+***What are different types/examples of natural experiments?***
+
+<p class="comment">
+
+Your ideas ...
+
+</p>
+
+***What makes for a good natural/quasi experimental design?***
+
+<p class="comment">
+
+Your ideas ...
+
+</p>
+
+![](images/dunning1.png)
+
+
 
 ***How do we identify treatment and control comparison groups?***
 
@@ -51,6 +69,8 @@ We want whatever variable that stands in as our "treatment" to be plausibly "exo
 Your ideas ...
 
 </p>
+
+We want whatever variable that stands in as our "treatment" to be plausibly "exogenous" in our design/model: "Exogeneity implies that the treatment and control groups created by the natural experiment are similar in terms of all observed and unobserved factors that may affect the outcome of interest, with the exception of the treatment and confounders that the researcher controls for." (Sekhon and Titiunik)
 
 Even without a randomized treatment, we can still think about the logic of our experimental design along the same way as the diagram below. We just need to think more carefully about our assumptions and potentially make adjustments to our design or modelling to help reduce the potential for selection bias or violations to excludability.
 
