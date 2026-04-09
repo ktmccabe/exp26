@@ -16,6 +16,7 @@ book:
     - 07-ethics.qmd
     - 08-FieldExperiments.qmd
     - 09-QuasiNaturalExperiments.qmd
+    - 10-LabExperiments.qmd
   page-navigation: true
   sidebar:
     style: docked
