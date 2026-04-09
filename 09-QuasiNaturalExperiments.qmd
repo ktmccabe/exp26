@@ -5,8 +5,9 @@ In this section, we will discuss quasi- and natural experiments. Here are a few 
 -   Thad Dunning's [book](https://www.cambridge.org/core/books/natural-experiments-in-the-social-sciences/96A64CBDC2A2952DC1C68AF77DE675AF)
     -   Sekhon, Jasjeet S., and Rocio Titiunik. 2012. “When Natural Experiments Are Neither Natural Nor Experiments.” *American Political Science Review*, 106 (1): 35-57.
 -   RDD: Michael Barber, Daniel M. Butler and Jessica Preece (2016), "Gender Inequalities in Campaign Finance", Quarterly Journal of Political Science: Vol. 11: No. 2, pp 219-248. http://dx.doi.org/10.1561/100.00015126
+    -   See critiques of candidate-characteristic RDD: Marshall, J. (2024), Can Close Election Regression Discontinuity Designs Identify Effects of Winning Politician Characteristics?. American Journal of Political Science, 68: 494-510. <https://doi.org/10.1111/ajps.12741>
 -   DiD and Unexpected Event: HOLMAN, M., MEROLLA, J., & ZECHMEISTER, E. (2021). The Curious Case of Theresa May and the Public That Did Not Rally: Gendered Reactions to Terrorist Attacks Can Cause Slumps Not Bumps. American Political Science Review, 1-16. doi: 10.1017/S0003055421000861
--   Instrumental Variables: Rossiter, Erin Leigh, and Jeffrey Harden. "The Development of an Issue Public: Evidence from The Eras Tour." (2024). The Journal of Politics
+-   Interrupted Time Series/Istrumental Variables: Rossiter, Erin Leigh, and Jeffrey Harden. "The Development of an Issue Public: Evidence from The Eras Tour." (2024). The Journal of Politics
 
 ## What makes an experiment not an experiment?
 
@@ -59,8 +60,6 @@ Your ideas ...
 </p>
 
 ![](images/dunning1.png)
-
-
 
 ***How do we identify treatment and control comparison groups?***
 
