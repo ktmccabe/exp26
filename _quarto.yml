@@ -18,6 +18,7 @@ book:
     - 09-QuasiNaturalExperiments.qmd
     - 10-LabExperiments.qmd
     - 11-Mediation.qmd
+    - 12-additionaltests.qmd
   page-navigation: true
   sidebar:
     style: docked
